@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;pathogen_mutation - Goon Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Goon Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+</header>
+<main>
+<h1>Pathogen Mutation <aside>/<a href="datum.html">datum</a>/<a href="datum/pathogen_mutation.html">pathogen_mutation</a></aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/modules/medical/pathology/pathogen_mutation.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;medical&#x2F;pathology&#x2F;pathogen_mutation.dm 41"/></a></h1>
+
+<p>Pathogen Mutations</p>
+<p>All possible mutation effects are a child of /datum/pathogen_mutation.
+These will be automatically chosen at random as candidates for mutation.
+There are a number of factors deciding whether or not a certain kind of mutation will occur. If a mutation's criteria are not satisfied,
+new mutations are chosen until one with satisfied criteria is found. The default mutations are defined so that no situation may arise
+where a mutation cannot be picked. Regardless, if all mutations defined are unsatisfied, a mutation will not occur.</p>
+<p>Each mutation may occur exactly session_maximum times per mutation session.
+This is in to prevent abusing the mutation system for gathering a large amount of symptoms quickly.
+Symptom gaining mutations are also purposefully made harder to gain very deadly symptoms.</p>
+<p>Mutation criteria for malicious mutations:</p>
+<ul>
+<li>For a malicious mutation to occur on a pathogen, its maliciousness must be greater or equal to the mutation's maliciousness threshold.</li>
+<li>For this mutation to occur, its maliciousness must be no greater than its maliciousness limit, unless the limit is lower than the
+threshold.</li>
+<li>For this mutation to occur, the pathogen's mutativeness must be greater than the mutativeness threshold if it's an evolution, or
+lower than the mutativeness threshold if it's a devolution. It may also occur on equality.</li>
+<li>If all the above criteria are satisfied, the chance of this mutation actually occurring is
+chance_base + maliciousness * chance_modifier</li>
+</ul>
+<p>Mutation criteria for benevolent mutations:</p>
+<ul>
+<li>For a benevolent mutation to occur on a pathogen, its maliciousness must be less or equal to the mutation's maliciousness threshold.</li>
+<li>For this mutation to occur, its maliciousness must be no less than its maliciousness limit, unless the limit is higher than the
+threshold.</li>
+<li>For this mutation to occur, the pathogen's mutativeness must be greater than the mutativeness threshold if it's an evolution, or
+lower than the mutativeness threshold if it's a devolution. It may also occur on equality.</li>
+<li>If all the above criteria are satisfied, the chance of this mutation actually occurring is
+chance_base - maliciousness * chance_modifier</li>
+</ul>
+<p>The mutation code must be in the mutate proc of the child type. It will be executed automatically if the mutation occurs.</p></main>
+<footer>
+    goonstation.dme
+    <a href="https://github.com/goonstation/goonstation/tree/e4223d0fa86c6f051336defac3dbcf69d48f996e">e4223d0</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.2</a></footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;computer&#x2F;file&#x2F;embedded_program - Goon Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Goon Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+</header>
+<main>
+<h1>/<a href="datum.html">datum</a>/<a href="datum/computer/file/embedded_program.html">computer/file/embedded_program</a>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/embedded_controller.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;embedded_controller.dm 1"/></a></h1>
+
+<p>Calls a proc from a javascript source and callsback with any data</p>
+<p>@href_list[&quot;proc&quot;] (string) The proc to call (no paths included)
+@href_list[&quot;window&quot;] (string) The browser window name to send return data to (required for callback)
+@href_list[&quot;param&quot;] (string) A url-encoded array of arguments to pass to the proc (e.g. param[foo]=bar&amp;param[bar]=foo)
+@href_list[&quot;type&quot;] (string) Type of proc to call. If none, assumes global proc.
+@href_list[&quot;datum&quot;] (string) Requires type=datum. Name of the datum the proc belongs to (/datum/ path not required)
+Note: datum is relative to client ONLY.
+@href_list[&quot;passClient&quot;] (boolean) Whether or not to send the client to the called proc</p>
+<p>@return (string) If the call proc returns data and window is set, will send the proc return string to ehjaxCallback javascript function.</p></main>
+<footer>
+    goonstation.dme
+    <a href="https://github.com/goonstation/goonstation/tree/e4223d0fa86c6f051336defac3dbcf69d48f996e">e4223d0</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.2</a></footer>
+</body>
+</html>

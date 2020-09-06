@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>_std&#x2F;defines&#x2F;lag.dm - Goon Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Goon Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="_std/defines/lag.html#define">Define Details</a></header>
+<main>
+<h1>_std/defines/lag.dm 
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="_std/defines/lag.html#define/MIN_TICKLAG">MIN_TICKLAG</a></th><td>min value ticklag can be</td></tr>
+        <tr><th><a href="_std/defines/lag.html#define/OVERLOADED_WORLD_TICKLAG">OVERLOADED_WORLD_TICKLAG</a></th><td>max value ticklag can be</td></tr>
+        <tr><th><a href="_std/defines/lag.html#define/TICKLAG_DILATION_INC">TICKLAG_DILATION_INC</a></th><td>how ticklag much to increase by when appropriate</td></tr>
+        <tr><th><a href="_std/defines/lag.html#define/TICKLAG_DILATION_DEC">TICKLAG_DILATION_DEC</a></th><td>how much to decrease by when appropriate //MBCX I DONT KNOW WHY BUT MOST VALUES CAUSE ROUNDING ERRORS, ITS VERY IMPORTANT THAT THIS REMAINS 0.2 FIOR NOW</td></tr>
+        <tr><th><a href="_std/defines/lag.html#define/OVERLOAD_PLAYERCOUNT">OVERLOAD_PLAYERCOUNT</a></th><td>when pcount is above this number on round start, increase ticklag to OVERLOADED_WORLD_TICKLAG to try to maintain smoothness</td></tr>
+        <tr><th><a href="_std/defines/lag.html#define/OSHAN_LIGHT_OVERLOAD">OSHAN_LIGHT_OVERLOAD</a></th><td>when pcount is above this number on game load, dont generate lighting surrounding the station because it lags the map to heck</td></tr>
+        <tr><th><a href="_std/defines/lag.html#define/SLOW_LIFE_PLAYERCOUNT">SLOW_LIFE_PLAYERCOUNT</a></th><td>whenn pcount is &gt;= this number, slow Life() processing a bit</td></tr>
+        <tr><th><a href="_std/defines/lag.html#define/SLOWEST_LIFE_PLAYERCOUNT">SLOWEST_LIFE_PLAYERCOUNT</a></th><td>whenn pcount is &gt;= this number, slow Life() processing a lot</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/MIN_TICKLAG"><aside class="declaration">#define </aside>MIN_TICKLAG
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm#L25">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm 25"/></a>
+    </h3>
+    <p>min value ticklag can be</p><h3 id="define/OSHAN_LIGHT_OVERLOAD"><aside class="declaration">#define </aside>OSHAN_LIGHT_OVERLOAD
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm#L34">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm 34"/></a>
+    </h3>
+    <p>when pcount is above this number on game load, dont generate lighting surrounding the station because it lags the map to heck</p><h3 id="define/OVERLOADED_WORLD_TICKLAG"><aside class="declaration">#define </aside>OVERLOADED_WORLD_TICKLAG
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm#L26">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm 26"/></a>
+    </h3>
+    <p>max value ticklag can be</p><h3 id="define/OVERLOAD_PLAYERCOUNT"><aside class="declaration">#define </aside>OVERLOAD_PLAYERCOUNT
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm#L33">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm 33"/></a>
+    </h3>
+    <p>when pcount is above this number on round start, increase ticklag to OVERLOADED_WORLD_TICKLAG to try to maintain smoothness</p><h3 id="define/SLOWEST_LIFE_PLAYERCOUNT"><aside class="declaration">#define </aside>SLOWEST_LIFE_PLAYERCOUNT
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm#L36">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm 36"/></a>
+    </h3>
+    <p>whenn pcount is &gt;= this number, slow Life() processing a lot</p><h3 id="define/SLOW_LIFE_PLAYERCOUNT"><aside class="declaration">#define </aside>SLOW_LIFE_PLAYERCOUNT
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm#L35">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm 35"/></a>
+    </h3>
+    <p>whenn pcount is &gt;= this number, slow Life() processing a bit</p><h3 id="define/TICKLAG_DILATION_DEC"><aside class="declaration">#define </aside>TICKLAG_DILATION_DEC
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm#L28">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm 28"/></a>
+    </h3>
+    <p>how much to decrease by when appropriate //MBCX I DONT KNOW WHY BUT MOST VALUES CAUSE ROUNDING ERRORS, ITS VERY IMPORTANT THAT THIS REMAINS 0.2 FIOR NOW</p><h3 id="define/TICKLAG_DILATION_INC"><aside class="declaration">#define </aside>TICKLAG_DILATION_INC
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/_std/defines/lag.dm#L27">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;defines&#x2F;lag.dm 27"/></a>
+    </h3>
+    <p>how ticklag much to increase by when appropriate</p></main>
+<footer>
+    goonstation.dme
+    <a href="https://github.com/goonstation/goonstation/tree/e4223d0fa86c6f051336defac3dbcf69d48f996e">e4223d0</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.2</a></footer>
+</body>
+</html>

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>Index - Goon Station 13</title>
+
+<!-- produced by:
+dmdoc 1.2.2  Copyright (C) 2017-2020  Tad Hardesty
+commit: ac037752c930030a46f4ddcb7e39b199246d19d1
+build date: 2020-07-11UTC
+
+This program comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under the conditions of the GNU
+General Public License version 3.
+-->
+<script src="dmdoc.js"></script>
+</head>
+<body>
+<header>
+    <a href="index.html">Goon Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+</header>
+<main>
+<h1>Goon Station 13</h1>
+
+
+
+<h3 id="modules">Modules
+<aside>(18 modules,
+    115/2645 macros, 4.3%)</aside></h3>
+<ul class="index-tree">
+    <li class="has-children"><span title="_std">_std</span><ul class="index-tree">
+    <li class="has-children"><span title="_std&#x2F;defines">defines</span><ul class="index-tree">
+    <li><a href="_std/defines/component_defines.html" title="_std&#x2F;defines&#x2F;component_defines.dm">component_defines</a></li>
+    <li><a href="_std/defines/lag.html" title="_std&#x2F;defines&#x2F;lag.dm">lag</a></li>
+    <li><a href="_std/defines/spacebee_extension.html" title="_std&#x2F;defines&#x2F;spacebee_extension.dm">spacebee_extension</a></li>
+    </ul></li>
+    <li class="has-children"><span title="_std&#x2F;macros">macros</span><ul class="index-tree">
+    <li><a href="_std/macros/macros.html" title="_std&#x2F;macros&#x2F;macros.dm">macros</a></li>
+    <li><a href="_std/macros/maps.html" title="_std&#x2F;macros&#x2F;maps.dm">maps</a></li>
+    </ul></li>
+    <li><a href="_std/setup.html" title="_std&#x2F;setup.dm">setup</a></li>
+    <li><a href="_std/tgs.html" title="_std&#x2F;tgs.dm">tgs</a></li>
+    <li><a href="_std/tgui.html" title="_std&#x2F;tgui.dm">tgui</a></li>
+    </ul></li>
+    <li class="has-children"><span title="code">code</span><ul class="index-tree">
+    <li class="has-children"><span title="code&#x2F;WorkInProgress">WorkInProgress</span><ul class="index-tree">
+    <li><a href="code/WorkInProgress/MarqStuff.html" title="code&#x2F;WorkInProgress&#x2F;MarqStuff.dm">MarqStuff</a></li>
+    <li><a href="code/WorkInProgress/SpyGuyStuff.html" title="code&#x2F;WorkInProgress&#x2F;SpyGuyStuff.dm">SpyGuyStuff</a></li>
+    </ul></li>
+    <li class="has-children"><span title="code&#x2F;datums">datums</span><ul class="index-tree">
+    <li><a href="code/datums/browserOutput.html" title="code&#x2F;datums&#x2F;browserOutput.dm">browserOutput</a></li>
+    <li><a href="code/datums/updateQueue.html" title="code&#x2F;datums&#x2F;updateQueue.dm">updateQueue</a></li>
+    </ul></li>
+    <li><span class="no-substance">mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;</span><a href="code/mob/living/carbon/human/gimmick.html" title="code&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;gimmick.dm">gimmick</a></li>
+    <li class="has-children"><span title="code&#x2F;modules">modules</span><ul class="index-tree">
+    <li><span class="no-substance">materials&#x2F;</span><a href="code/modules/materials/Mat_MaterialProcs.html" title="code&#x2F;modules&#x2F;materials&#x2F;Mat_MaterialProcs.dm">Mat_MaterialProcs</a> - !!!!!!!!!!!!!!!!!!! THINGS LIKE GOLD SPARKLES ARE NOT REMOVED WHEN MATERIAL CHANGES!. MOVE THESE TO NEW APPEARANCE SYSTEM.</li>
+    <li class="has-children"><span title="code&#x2F;modules&#x2F;tgs">tgs</span><ul class="index-tree">
+    <li><a href="code/modules/tgs/README.html" title="code&#x2F;modules&#x2F;tgs&#x2F;README.md">DMAPI Internals</a> - This folder should be placed on it's own inside a codebase that wishes to use the TGS DMAPI. Warranty void if modified.</li>
+    <li><span class="no-substance">core&#x2F;</span><a href="code/modules/tgs/core/README.html" title="code&#x2F;modules&#x2F;tgs&#x2F;core&#x2F;README.md">Core DMAPI functions</a> - This folder contains all DMAPI code not directly involved in an API.</li>
+    <li><span class="no-substance">v3210&#x2F;</span><a href="code/modules/tgs/v3210/README.html" title="code&#x2F;modules&#x2F;tgs&#x2F;v3210&#x2F;README.md">DMAPI V3</a> - This DMAPI implements bridge using file output which TGS monitors for.</li>
+    <li><span class="no-substance">v4&#x2F;</span><a href="code/modules/tgs/v4/README.html" title="code&#x2F;modules&#x2F;tgs&#x2F;v4&#x2F;README.md">DMAPI V4</a> - This DMAPI implements bridge requests using file output which TGS monitors for. It has a safe mode restriction.</li>
+    </ul></li>
+    </ul></li>
+    </ul></li>
+    </ul>
+
+
+
+<h3 id="types">Types
+<aside>(115 detailed/477 documented/19526 total, 2.4%)</aside></h3>
+<ul class="index-tree">
+    <li><a href="global.html" title="(global)">(global)</a></li>
+    <li class="has-children"><a href="area.html" title="&#x2F;area">area</a> - A grouping of tiles into a logical space. The sworn enemy of mappers.<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;area&#x2F;build_zone">Build Space</span> - currently for z4 just so people don't teleport in there randomly</li>
+    <li><a href="area/built_zone.html" title="&#x2F;area&#x2F;built_zone">Built Zone</a></li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;cordon">CORDON</span> - Unless you are an admin, you may not pass GO nor collect $200</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;area&#x2F;crypt">crypt</span> - cogwerks - crypt place<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;area&#x2F;crypt&#x2F;sigma">Research Facility Sigma</span> - Jam Mansion 3.0</li>
+    </ul></li>
+    <li><span class="no-substance">dojo&#x2F;</span><span class="no-substance" title="&#x2F;area&#x2F;dojo&#x2F;sakura">sakura</span> - Gannets Space Dojo Zone
+Contents:
+Areas:
+Sakura Trees
+Main Dojo
+Mobs:
+Ronin
+Objs:
+Dojo Hmamer
+Unfinished Katana Decal &amp; Sword
+Torii Gate
+Sakura Trees
+Kanji Symbols
+Dojo House
+Lotus Flowers
+Birdhouse Shrines
+Plant Pots
+Stone Lamps
+Railing &amp; Walls
+Furnace
+Anvil &amp; Bellows
+Sword Rack
+Fake Katana
+Lanterns
+Hibachi &amp; Teapot
+Wall Scrolls
+Books:
+Sword Scroll
+5 Lore Scrolls
+Uguu Scroll
+Turfs:
+Sengoku Walls
+False &amp; Tall Sengoku Walls
+Paper Walls
+Tatami Floor
+Water Floors
+Bridge Floors
+Stone Stairs
+Sand Floors</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;drone">Drone Assembly Outpost</span> - syndicate drone factory areas</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;area&#x2F;greek">greek</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;area&#x2F;greek&#x2F;beach">Strange Beach</span> - Beach Stuff</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;greek&#x2F;caves">Strange Caves</span> - Cave Stuff</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;greek&#x2F;underworld">Strange Depths</span> - Underworld Stuff</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;hell">????</span> - cogwerks - HELL</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;janitor_setpiece">Rental Office</span> - adhara setpiece</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;listeningpost">Listening Post</span> - Nukeops listening post</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;mining">Mining Outpost</span> - old mining outpost</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;moon">moon</span> - Lunar Moon Museum Zone
+Contents:
+Moon Areas
+Moon turfs
+Moon emails
+A tourguid bud
+Museum objects
+Control Panel Puzzle
+A li'l fake bomb for an exhibit.</li>
+    <li><span class="no-substance">prison&#x2F;cell_block&#x2F;</span><span class="no-substance" title="&#x2F;area&#x2F;prison&#x2F;cell_block&#x2F;wards">Asylum Wards</span> - Used for the admin holding cells.</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;research_outpost">Research Outpost</span> - Off-station research outpost. Used for Cog2.</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;area&#x2F;shamecube">Shame Cube</span> - Shamecube area, applied on the admin command. Blocks entry.<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;area&#x2F;shamecube&#x2F;unshamefulcube">Unshameful Cube</span> - Unshame cube area, replaces the previous shamecube area.</li>
+    </ul></li>
+    <li><a href="area/shuttle.html" title="&#x2F;area&#x2F;shuttle">shuttle</a></li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;solarium">Solarium</span> - cogwerks - solar lounge</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;area&#x2F;station">station</span> - Base station area<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;area&#x2F;station&#x2F;turret_protected">Turret Protected Area</span> - Turret protected areas, will activate AI turrets to pop up when entered, and vice-versa when exited.</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;syndicate_station">Syndicate Station</span> - Nukeops spawn station</li>
+    <li><a href="area/upper_arctic.html" title="&#x2F;area&#x2F;upper_arctic">upper_arctic</a> - /// cogwerks - stuff for the precursor ruins and some other various solarium-related puzzles ///////</li>
+    <li><span class="no-substance" title="&#x2F;area&#x2F;wizard_station">Wizard&#x27;s Den</span> - Wizard den area for the wizard shuttle spawn</li>
+    </ul></li>
+    <li class="has-children"><a href="atom.html" title="&#x2F;atom">atom</a> - The base type for nearly all physical objects in SS13<ul class="index-tree">
+    <li><a href="atom/movable.html" title="&#x2F;atom&#x2F;movable">movable</a></li>
+    </ul></li>
+    <li><span class="no-substance">chui&#x2F;window&#x2F;</span><span class="no-substance" title="&#x2F;chui&#x2F;window&#x2F;contributorrewards">Contributor Rewards</span> - Management stuff below.</li>
+    <li><a href="client.html" title="&#x2F;client">client</a></li>
+    <li class="has-children"><a href="datum.html" title="&#x2F;datum">datum</a><ul class="index-tree">
+    <li class="has-children"><span class="no-substance">_is_abstract&#x2F;datum&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;_is_abstract&#x2F;datum&#x2F;asset">asset</span> - Base asset type<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;_is_abstract&#x2F;datum&#x2F;asset&#x2F;basic">basic</span> - Basic assets</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;_is_abstract&#x2F;datum&#x2F;asset&#x2F;group">group</span> - For grouping multiple assets together</li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;abilityHolder">abilityHolder</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;abilityHolder&#x2F;cyalume_knight">cyalume_knight</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;abilityHolder&#x2F;gang">gang</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;abilityHolder&#x2F;gimmick">gimmick</span> - Random Satan Gimmick Spells</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;abilityHolder&#x2F;kudzu">kudzu</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;abilityHolder&#x2F;santa">santa</span> - Ability holder</li>
+    </ul></li>
+    <li><span class="no-substance">achievementReward&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;achievementReward&#x2F;satchel">satchel</span> - Rewards below</li>
+    <li><span class="no-substance">action&#x2F;bar&#x2F;private&#x2F;icon&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;action&#x2F;bar&#x2F;private&#x2F;icon&#x2F;rush">rush</span> - REFERENCES</li>
+    <li><a href="datum/admins.html" title="&#x2F;datum&#x2F;admins">admins</a></li>
+    <li><a href="datum/antagWeighter.html" title="&#x2F;datum&#x2F;antagWeighter">antagWeighter</a></li>
+    <li><a href="datum/apiHandler.html" title="&#x2F;datum&#x2F;apiHandler">apiHandler</a></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;asset">asset</span><ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;asset&#x2F;basic">basic</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;asset&#x2F;basic&#x2F;fontawesome">fontawesome</span> - Fontawesome assets</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;asset&#x2F;basic&#x2F;tgui">tgui</span> - Normal base window tgui assets</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;asset&#x2F;basic&#x2F;tgui_common">tgui_common</span> - Common tgui assets</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;asset&#x2F;basic&#x2F;tgui_panel">tgui_panel</span> - tgui panel specific assets</li>
+    </ul></li>
+    <li><span class="no-substance">group&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;asset&#x2F;group&#x2F;base_tgui">base_tgui</span> - Group for tgui assets</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;attackResults">attackResults</span> - attackResult datum</li>
+    <li><span class="no-substance">bioEffect&#x2F;power&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;bioEffect&#x2F;power&#x2F;healing_touch">Healing Touch</span> - COMBINATION-ONLY EFFECTS BELOW</li>
+    <li class="has-children"><a href="datum/chemicompiler_core.html" title="&#x2F;datum&#x2F;chemicompiler_core">chemicompiler_core</a> - Chemicompiler
+v1.0 By volundr 9/24/14
+This device is a programmable chemistry mixing and heating device.
+The javascript code to run the frontend is in browserassets/js/chemicompiler.min.js
+which is minified javascript from browserassets/js/chemicompiler.js
+If you make changes to the uncompressed javascript, you'll need to install node.js,
+and run <code>npm install -g uglify-js</code>
+then run <code>uglifyjs browserassets/js/chemicompiler.js -c &gt; browserassets/js/chemicompiler.min.js</code> to rebuild the compressed version.<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;chemicompiler_core&#x2F;portableCore">portableCore</span> - Chemicompiler
+v1.0 By volundr 9/24/14
+This device is a programmable chemistry mixing and heating device.
+The javascript code to run the frontend is in browserassets/js/chemicompiler.min.js
+which is minified javascript from browserassets/js/chemicompiler.js
+If you make changes to the uncompressed javascript, you'll need to install node.js,
+and run <code>npm install -g uglify-js</code>
+then run <code>uglifyjs browserassets/js/chemicompiler.js -c &gt; browserassets/js/chemicompiler.min.js</code> to rebuild the compressed version.</li>
+    </ul></li>
+    <li><a href="datum/chemicompiler_executor.html" title="&#x2F;datum&#x2F;chemicompiler_executor">chemicompiler_executor</a></li>
+    <li class="has-children"><a href="datum/command_argument.html" title="&#x2F;datum&#x2F;command_argument">command_argument</a> - argument for a spacebee command, a singleton (should be created through get_singleton())<ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;command_argument&#x2F;number">number</span> - a number, not necessarily an integer<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;command_argument&#x2F;number&#x2F;integer">integer</span> - an integer</li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;command_argument&#x2F;string">string</span> - a quoted or unquoted string argument<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;command_argument&#x2F;string&#x2F;optional">optional</span> - a string argument that doesn't have to exist (only supported as the last argument really)</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;command_argument&#x2F;the_rest">the_rest</span> - the whole rest of the command (only supported as the last argument for obvious reasons)</li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;commodity">commodity</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;airzooka">airzooka</span> - greg</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;bodyparts">bodyparts</span> - body parts</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;contraband">contraband</span> - syndicate trader<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;contraband&#x2F;command_suit">command_suit</span> - purchase stuff</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;costume">costume</span> - costume kits</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;drugs">drugs</span> - 420 all day<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;drugs&#x2F;methamphetamine">methamphetamine</span> - things you can buy from the traders</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;drugs&#x2F;poppies">poppies</span> - these are things that you can sell to the traders</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;hat">hat</span> - skeleton trader</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;mat_bar">mat_bar</span> - pathology</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;podparts">podparts</span> - pod sales</li>
+    <li><span class="no-substance">produce&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;produce&#x2F;special">special</span> - food trader</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;relics">relics</span> - valuable space junk</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;salvage">salvage</span> - salvage trader</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;commodity&#x2F;synthmodule">synthmodule</span> - pathology</li>
+    </ul></li>
+    <li><a href="datum/component.html" title="&#x2F;datum&#x2F;component">Component</a> - The component datum</li>
+    <li class="has-children"><span class="no-substance">computer&#x2F;</span><span title="&#x2F;datum&#x2F;computer&#x2F;file">file</span><ul class="index-tree">
+    <li><a href="datum/computer/file/embedded_program.html" title="&#x2F;datum&#x2F;computer&#x2F;file&#x2F;embedded_program">embedded_program</a> - Calls a proc from a javascript source and callsback with any data</li>
+    <li><span class="no-substance">mainframe_program&#x2F;os&#x2F;</span><a href="datum/computer/file/mainframe_program/os/bootstrap.html" title="&#x2F;datum&#x2F;computer&#x2F;file&#x2F;mainframe_program&#x2F;os&#x2F;bootstrap">NETBOOT</a></li>
+    <li><span class="no-substance">text&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;computer&#x2F;file&#x2F;text&#x2F;tempus_corruption">***ERROR***</span> - TEMPUS</li>
+    </ul></li>
+    <li class="has-children"><span title="&#x2F;datum&#x2F;controller">controller</span><ul class="index-tree">
+    <li class="has-children"><a href="datum/controller/process.html" title="&#x2F;datum&#x2F;controller&#x2F;process">process</a><ul class="index-tree">
+    <li><a href="datum/controller/process/tgui.html" title="&#x2F;datum&#x2F;controller&#x2F;process&#x2F;tgui">tgui</a></li>
+    </ul></li>
+    <li><a href="datum/controller/processScheduler.html" title="&#x2F;datum&#x2F;controller&#x2F;processScheduler">processScheduler</a></li>
+    </ul></li>
+    <li><a href="datum/debugFileOutput.html" title="&#x2F;datum&#x2F;debugFileOutput">debugFileOutput</a> - This is a generic handler for logging your dumb JS errors generated by html popups</li>
+    <li><a href="datum/dj_panel.html" title="&#x2F;datum&#x2F;dj_panel">DJ Panel for Admins</a> - Allows for easily accessible music/sound playing for admins/allowed players.</li>
+    <li class="has-children"><span class="no-substance">effects&#x2F;</span><span title="&#x2F;datum&#x2F;effects&#x2F;system">system</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;effects&#x2F;system&#x2F;harmless_smoke_spread">harmless_smoke_spread</span> - SMOKE SYSTEMS</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;effects&#x2F;system&#x2F;mustard_gas_spread">mustard_gas_spread</span> - SMOKE SYSTEMS</li>
+    <li><a href="datum/effects/system/spark_spread.html" title="&#x2F;datum&#x2F;effects&#x2F;system&#x2F;spark_spread">spark_spread</a></li>
+    </ul></li>
+    <li><span class="no-substance">game_mode&#x2F;</span><a href="datum/game_mode/gang.html" title="&#x2F;datum&#x2F;game_mode&#x2F;gang">gang</a></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;gang_item">gang_item</span><ul class="index-tree">
+    <li><span class="no-substance">country_western&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;gang_item&#x2F;country_western&#x2F;colt_saa">Colt Single Action Army .45</span> - COUNTRY WESTERN</li>
+    <li><span class="no-substance">ninja&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;gang_item&#x2F;ninja&#x2F;discount_katana">Katana</span> - NINJA</li>
+    <li><span class="no-substance">space&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;gang_item&#x2F;space&#x2F;discount_csaber">Faux C-Saber</span> - SPACE</li>
+    </ul></li>
+    <li><span class="no-substance">hud&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;hud&#x2F;nukewires">nukewires</span> - src.hud.sel.icon = src.hud.icon_hud</li>
+    <li><span class="no-substance">job&#x2F;special&#x2F;</span><a href="datum/job/special/syndicate_weak.html" title="&#x2F;datum&#x2F;job&#x2F;special&#x2F;syndicate_weak">Junior Syndicate Operative</a></li>
+    <li><span class="no-substance">jobXpReward&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;jobXpReward&#x2F;clown1">Special Crayon</span> - CLOWN</li>
+    <li><a href="datum/keymap.html" title="&#x2F;datum&#x2F;keymap">keymap</a></li>
+    <li><span class="no-substance">lifeprocess&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;lifeprocess&#x2F;skin">skin</span> - Mutrace and normal sight
+Dead sight
+Ship sight
+Reagents
+Glasses handled separately because i dont have a fast way to get glasses on any mob type</li>
+    <li><a href="datum/limb.html" title="&#x2F;datum&#x2F;limb">limb</a> - Limb datums for arms. Describes all activity performed by the limb.
+Currently, this is basically attack_hand().</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;manufacture">manufacture</span><ul class="index-tree">
+    <li><span class="no-substance">air_can&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;air_can&#x2F;large">High-Volume Air Canister</span> - cogwerks - gas extraction stuff</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;alastor">Alastor pattern laser rifle</span> - GUNS</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;crate">Crate</span> - QM CRATES</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;engine">Warp-1 Engine</span> - Ship Items -- OLD COMPONENTS</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;id_card">ID card</span> - HOP</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;mechanics">mechanics</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;mechanics&#x2F;clonepod">cloning pod</span> - Cloner</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;mechanics&#x2F;loafer">loafer (deploy on plating)</span> - Loafer</li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;pod">pod</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;pod&#x2F;parts">Pod Frame Kit</span> - pod construction components</li>
+    <li><span class="no-substance">weapon&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;pod&#x2F;weapon&#x2F;mining">Plasma Cutter System</span> - pod addons</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;robo_frame">Cyborg Frame</span> - Robotics</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;manufacture&#x2F;scalpel">Scalpel</span> - Medical</li>
+    </ul></li>
+    <li class="has-children"><a href="datum/map_settings.html" title="&#x2F;datum&#x2F;map_settings">MAP</a><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;map_settings&#x2F;donut2">DONUT2</span> - Map-specific initialization, feel free to override for your map!</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;matfab_part">matfab_part</span> - BASE CLASS BELOW</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;matfab_recipe">matfab_recipe</span> - BASE CLASS BELOW</li>
+    <li><a href="datum/microbody.html" title="&#x2F;datum&#x2F;microbody">Microscopic body</a> - Microbody notes</li>
+    <li><span class="no-substance">mining_encounter&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;mining_encounter&#x2F;tel_miraclium">Miraclium asteroid</span> - TELESCOPE ENCOUNTERS BELOW</li>
+    <li class="has-children"><a href="datum/mutantrace.html" title="&#x2F;datum&#x2F;mutantrace">mutantrace</a><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;mutantrace&#x2F;blob">blob</span> - LEGS</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;mutation_orb_mutdata">mutation_orb_mutdata</span> - Guardbuddy stuff 
+Mutation orb stuff //</li>
+    <li><a href="datum/nuke_knobset.html" title="&#x2F;datum&#x2F;nuke_knobset">nuke_knobset</a></li>
+    <li><span class="no-substance">objective_set&#x2F;spy_theft&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;objective_set&#x2F;spy_theft&#x2F;bodyguard_gimmick">bodyguard_gimmick</span> - datum/objective_set/spy_theft
+datum/objective_set/spy_theft/vigilante</li>
+    <li><a href="datum/pathogen_mutation.html" title="&#x2F;datum&#x2F;pathogen_mutation">Pathogen Mutation</a> - Pathogen Mutations</li>
+    <li><a href="datum/pathogendna.html" title="&#x2F;datum&#x2F;pathogendna">pathogendna</a> - Pathogen DNA</li>
+    <li><a href="datum/player.html" title="&#x2F;datum&#x2F;player">player</a> - for client variables and stuff that has to persist between connections</li>
+    <li><a href="datum/processSchedulerView.html" title="&#x2F;datum&#x2F;processSchedulerView">processSchedulerView</a></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;projectile">projectile</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;projectile&#x2F;energy_bolt_antighost">ectoplasmic bolt</span> - Ghost Hunting for Halloween</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;projectile&#x2F;energy_bolt_v">vuvuzela bolt</span> - VUVUZELA<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;projectile&#x2F;energy_bolt_v&#x2F;trumpet">trumpet bolt</span> - Donald Trumpet</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;projectile&#x2F;wavegun">energy wave</span> - You will appear adjacent to the beacon</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;property_setter_property">property_setter_property</span> - Generic unique items stuff
+Clothing properties stuff</li>
+    <li class="has-children"><a href="datum/reagent.html" title="&#x2F;datum&#x2F;reagent">Reagent</a><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;reagent&#x2F;blood">blood</span> - BODILY FLUIDS</li>
+    <li><span class="no-substance">harmful&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;reagent&#x2F;harmful&#x2F;omega_mutagen">glowing slurry</span> - work in progress. new mutagen for omega slurrypods - cogwerks</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;reagent&#x2F;weedkiller">atrazine</span> - BOTANY REAGENTS</li>
+    </ul></li>
+    <li><span class="no-substance">reagents&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;reagents&#x2F;fluid_group">fluid_group</span> - Fluid Group</li>
+    <li class="has-children"><span class="no-substance">robot&#x2F;</span><a href="datum/robot/module_tool_creator.html" title="&#x2F;datum&#x2F;robot&#x2F;module_tool_creator">module_tool_creator</a> - Stub parent.
+Allows for a tool (or lists of tools) to be created and configured properly.
+Configuration includes correctly setting them up for inclusion in a robot module.
+Configuration can include other processing, e.g. random generation.<ul class="index-tree">
+    <li class="has-children"><a href="datum/robot/module_tool_creator/item_type.html" title="&#x2F;datum&#x2F;robot&#x2F;module_tool_creator&#x2F;item_type">item_type</a> - Stub parent.
+Allows for simple instantiation of a single /obj/item from a type.
+@property {type&lt;/obj/item&gt;} [item_type]<ul class="index-tree">
+    <li><a href="datum/robot/module_tool_creator/item_type/amount.html" title="&#x2F;datum&#x2F;robot&#x2F;module_tool_creator&#x2F;item_type&#x2F;amount">amount</a> - Stub parent.
+Allows simple instantiation of a single /obj/item from a type that uses the <code>amount</code> var.
+You may need to extend the <code>setup</code> proc for e.g. custom icon state behavior.
+@property {number} [amount=1]</li>
+    <li><a href="datum/robot/module_tool_creator/item_type/random.html" title="&#x2F;datum&#x2F;robot&#x2F;module_tool_creator&#x2F;item_type&#x2F;random">random</a> - Stub parent.
+Allows instantiation of a single /obj/item type picked from a list of types.
+@property {/list&lt;type&lt;/obj/item&gt;&gt;} [item_types]</li>
+    </ul></li>
+    <li><a href="datum/robot/module_tool_creator/item_types.html" title="&#x2F;datum&#x2F;robot&#x2F;module_tool_creator&#x2F;item_types">item_types</a> - Stub parent.
+Allows simple instantiation of multiple /obj/item instances from a list of types.
+@property {/list&lt;path&lt;/obj/item&gt;&gt;} [item_types]</li>
+    <li class="has-children"><a href="datum/robot/module_tool_creator/recursive.html" title="&#x2F;datum&#x2F;robot&#x2F;module_tool_creator&#x2F;recursive">recursive</a> - Versatile recursive definition.
+@typedef (
+type&lt;/obj/item&gt;|
+type&lt;/datum/robot/module_tool_creator&gt;|
+/datum/robot/module_tool_creator|
+/list&lt;/datum/robot/module_tool_creator/recursive/definition&gt;
+) /datum/robot/module_tool_creator/recursive/definition<ul class="index-tree">
+    <li><span class="no-substance">module&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;robot&#x2F;module_tool_creator&#x2F;recursive&#x2F;module&#x2F;mining">mining</span> - obj/item/reagent_containers/patch/burn/medbot,
+obj/item/reagent_containers/patch/bruise/medbot,</li>
+    </ul></li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;rockbox_globals">rockbox_globals</span> - PDA NOTIFY</li>
+    <li><a href="datum/score_tracker.html" title="&#x2F;datum&#x2F;score_tracker">score_tracker</a></li>
+    <li class="has-children"><a href="datum/spacebee_extension_command.html" title="&#x2F;datum&#x2F;spacebee_extension_command">spacebee_extension_command</a> - A command for the Spacebee extension thing<ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;spacebee_extension_command&#x2F;state_based">state_based</span> - For commands with multiple states (several stages of entering inputs, confirmation dialogs etc.).
+Define a proc for each state and use <code>go_to_state(new_state)</code> to go to that state. When the
+user inputs their next command instead of being processed by the Spacebee extension system it will
+get processed by said state of this command.<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;spacebee_extension_command&#x2F;state_based&#x2F;confirmation">confirmation</span> - For dangerous commands that the user should really doublecheck. Override
+prepare to check the validity of the vars and return a message (or null to cancel).
+User will need to reply with ;;yes to continue at which point do_it gets called.</li>
+    </ul></li>
+    </ul></li>
+    <li><a href="datum/spacebee_extension_system.html" title="&#x2F;datum&#x2F;spacebee_extension_system">spacebee_extension_system</a> - the main thing that processes and runs the commands</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;spectro_analysis">spectro_analysis</span> - Analysis datum for the spectrometer</li>
+    <li><a href="datum/suppressant.html" title="&#x2F;datum&#x2F;suppressant">Suppressant</a> - Pathogen suppressants</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;syndicate_buylist">syndicate_buylist</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;syndicate_buylist&#x2F;generic">You shouldn&#x27;t see me!</span> - Standard items (generic &amp; nukeops uplink)</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;syndicate_buylist&#x2F;surplus">You shouldn&#x27;t see me!</span> - Surplus-exclusive items</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;syndicate_buylist&#x2F;traitor">You shouldn&#x27;t see me!</span> - Standard items (traitor uplink)<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;syndicate_buylist&#x2F;traitor&#x2F;clowncar">Clown Car</span> - Job-specific items</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;syndicate_buylist&#x2F;traitor&#x2F;fogmaster">Fog Machine</span> - Disabled items</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;syndicate_buylist&#x2F;traitor&#x2F;idtracker">Target ID Tracker</span> - Objective-specific items</li>
+    </ul></li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;targetable">targetable</span><ul class="index-tree">
+    <li><span class="no-substance">critter&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;critter&#x2F;powerkick">Power Kick</span> - obj/overlay/tile_effect/cracks/trilobite
+obj/overlay/tile_effect/cracks/pikaia</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;gimmick">gimmick</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;gimmick&#x2F;Jestershift">Planeshift</span> - Kill Jesta</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;gimmick&#x2F;reveal">Toggle Reveal</span> - Dumb Floorclown stuff</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;grinch">grinch</span> - Grinch spell parent</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;hunter">hunter</span> - Hunter spell parent</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;merchant">merchant</span> - Merchant spell parent<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;merchant&#x2F;summon_contract">Summon Contract</span> - Contract Summoning Spell</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;spell">spell</span> - Wizard spell parent</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;vampire">vampire</span> - Vampire spell parent</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;virtual">virtual</span> - Wrestler spell parent</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;werewolf">werewolf</span> - Werewolf spell parent</li>
+    <li><span class="no-substance" title="&#x2F;datum&#x2F;targetable&#x2F;wrestler">wrestler</span> - Wrestler spell parent</li>
+    </ul></li>
+    <li><a href="datum/tgs_chat_channel.html" title="&#x2F;datum&#x2F;tgs_chat_channel">tgs_chat_channel</a> - Represents a connected chat channel.</li>
+    <li><a href="datum/tgs_chat_command.html" title="&#x2F;datum&#x2F;tgs_chat_command">tgs_chat_command</a> - User definable chat command</li>
+    <li><a href="datum/tgs_chat_user.html" title="&#x2F;datum&#x2F;tgs_chat_user">tgs_chat_user</a></li>
+    <li><a href="datum/tgs_event_handler.html" title="&#x2F;datum&#x2F;tgs_event_handler">tgs_event_handler</a></li>
+    <li class="has-children"><a href="datum/tgs_revision_information.html" title="&#x2F;datum&#x2F;tgs_revision_information">tgs_revision_information</a> - Represents git revision information.<ul class="index-tree">
+    <li><a href="datum/tgs_revision_information/test_merge.html" title="&#x2F;datum&#x2F;tgs_revision_information&#x2F;test_merge">test_merge</a> - Represents a merge of a GitHub pull request.</li>
+    </ul></li>
+    <li><a href="datum/tgs_version.html" title="&#x2F;datum&#x2F;tgs_version">tgs_version</a> - Represents a version.</li>
+    <li><a href="datum/tgui.html" title="&#x2F;datum&#x2F;tgui">tgui</a> - Copyright (c) 2020 Aleksej Komarov
+SPDX-License-Identifier: MIT</li>
+    <li><a href="datum/tgui_window.html" title="&#x2F;datum&#x2F;tgui_window">tgui_window</a> - Copyright (c) 2020 Aleksej Komarov
+SPDX-License-Identifier: MIT</li>
+    <li><span class="no-substance">trader&#x2F;</span><a href="datum/trader/buford.html" title="&#x2F;datum&#x2F;trader&#x2F;buford">Buford Tenin</a> - sell list </li>
+    <li><a href="datum/ui_state.html" title="&#x2F;datum&#x2F;ui_state">ui_state</a></li>
+    <li><a href="datum/updateQueue.html" title="&#x2F;datum&#x2F;updateQueue">updateQueue</a></li>
+    <li><a href="datum/updateQueueWorker.html" title="&#x2F;datum&#x2F;updateQueueWorker">updateQueueWorker</a></li>
+    <li><a href="datum/vote_manager.html" title="&#x2F;datum&#x2F;vote_manager">vote_manager</a></li>
+    </ul></li>
+    <li><a href="kText.html" title="&#x2F;kText">kText</a></li>
+    <li class="has-children"><a href="mob.html" title="&#x2F;mob">mob</a><ul class="index-tree">
+    <li><span class="no-substance">dead&#x2F;</span><a href="mob/dead/aieye.html" title="&#x2F;mob&#x2F;dead&#x2F;aieye">AI Eye</a></li>
+    <li class="has-children"><a href="mob/living.html" title="&#x2F;mob&#x2F;living">living</a><ul class="index-tree">
+    <li class="has-children"><span class="no-substance">carbon&#x2F;</span><a href="mob/living/carbon/human.html" title="&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human">human</a><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;cyalume_knight">cyalume_knight</span> - Cyalume knight stuff</li>
+    <li><span class="no-substance">npc&#x2F;</span><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;npc&#x2F;syndicate">syndicate</span> - rest in peace NPC classic-mentally challenged idiots, you were shit</li>
+    </ul></li>
+    <li><span class="no-substance">critter&#x2F;</span><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;critter&#x2F;mechmonstrosity">Mechanical Monstrosity</span> - mob/living/critter/martian/infiltrator/mancer</li>
+    <li><span class="no-substance">intangible&#x2F;</span><a href="mob/living/intangible/blob_overmind.html" title="&#x2F;mob&#x2F;living&#x2F;intangible&#x2F;blob_overmind">Blob Overmind</a></li>
+    <li class="has-children"><a href="mob/living/silicon.html" title="&#x2F;mob&#x2F;living&#x2F;silicon">silicon</a><ul class="index-tree">
+    <li><a href="mob/living/silicon/ai.html" title="&#x2F;mob&#x2F;living&#x2F;silicon&#x2F;ai">AI</a></li>
+    <li><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;silicon&#x2F;hive_mainframe">Robot Mainframe</span> - obj/item/hive_module/security/New()</li>
+    <li><span class="no-substance">robot&#x2F;buddy&#x2F;</span><span class="no-substance" title="&#x2F;mob&#x2F;living&#x2F;silicon&#x2F;robot&#x2F;buddy&#x2F;responsive">responsive</span> - Cyalume knight stuff
+Guardbuddy stuff</li>
+    </ul></li>
+    </ul></li>
+    </ul></li>
+    <li class="has-children"><a href="obj.html" title="&#x2F;obj">obj</a><ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;ability_button">ability_button</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;ability_button&#x2F;shoerocket">Activate Shoes</span> - Sonic + Rocket Shoe Abilities &amp; Smoke</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;ability_button&#x2F;stone_owl">Owl Stone</span> - Gimmick Stones</li>
+    </ul></li>
+    <li><span class="no-substance">access_spawn&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;access_spawn&#x2F;owlmaint">owlery maint access spawn</span> - owlzone access</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;channel">channel</span> - Channel</li>
+    <li><span class="no-substance">crevice&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;crevice&#x2F;meatland">macabre grotesquerie</span> - Meat Zone
+Contents:
+Meaty areas
+Stomach acid turf &amp; such
+Meat lights.  Not to be confused with Spam Lite reduced fat meat-like protein product.
+Grumpy meat-infested monster doors, monster floors, mutant cosmonauts, and a very sad giant head.
+Various log files.
+Audio logs
+Fancy items in the land of meat
+Puzzle elements
+Gross mutant limbs</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;critter">critter</span><ul class="index-tree">
+    <li><span class="no-substance">cat&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;critter&#x2F;cat&#x2F;crimejones">Crime Jones</span> - Cat alley stuff</li>
+    <li><span class="no-substance">domestic_bee&#x2F;</span><a href="obj/critter/domestic_bee/heisenbee.html" title="&#x2F;obj&#x2F;critter&#x2F;domestic_bee&#x2F;heisenbee">Heisenbee</a></li>
+    <li><span class="no-substance">gunbot&#x2F;drone&#x2F;buzzdrone&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;critter&#x2F;gunbot&#x2F;drone&#x2F;buzzdrone&#x2F;naniteswarm">nanite swarm</span> - MISC EVENT ETC RELATED BELOW</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;critter&#x2F;hootening">THE HOOTENING</span> - ALTERNATE HOOTENING ATTEMPT</li>
+    <li><a href="obj/critter/sealpup.html" title="&#x2F;obj&#x2F;critter&#x2F;sealpup">space seal pup</a></li>
+    <li><span class="no-substance">spider&#x2F;ice&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;critter&#x2F;spider&#x2F;ice&#x2F;baby">baby ice spider</span> - subtypes</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;critter&#x2F;wendigo">wendigo</span> - cogwerks - hideous wendigo beast<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;critter&#x2F;wendigo&#x2F;king">wendigo king</span> - king wendigo, why not</li>
+    </ul></li>
+    <li><a href="obj/critter/zombie.html" title="&#x2F;obj&#x2F;critter&#x2F;zombie">Zombie</a></li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;decal">decal</span><ul class="index-tree">
+    <li><span class="no-substance">fakeobjects&#x2F;carcosa&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;decal&#x2F;fakeobjects&#x2F;carcosa&#x2F;statue">statue</span> - Unused Carcosa Area Stuff
+Contents:
+Statues
+Trees
+Walls
+Arch
+Grass
+Rubble
+Plants
+Dirt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;decal&#x2F;float">float</span> - floating decals</li>
+    <li><span class="no-substance">lightshaft&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;decal&#x2F;lightshaft&#x2F;rainbow">rainbow</span> - Misc Stuff</li>
+    </ul></li>
+    <li><span class="no-substance">effects&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;effects&#x2F;ion_trails">ion trails</span> - ///// Attach an Ion trail to any object, that spawns when it moves (like for the jetpack)
+just pass in the object to attach it to in set_up
+Then do start() to start it and stop() to stop it, obviously
+and don't call start() in a loop that will be repeated otherwise it'll get spammed!</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;fluid_spawner">fluid_spawner</span> - spawner</li>
+    <li><a href="obj/head_on_spike.html" title="&#x2F;obj&#x2F;head_on_spike">head on a spike</a></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;indestructible">indestructible</span> - OBJECTS</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;item">item</span> - Base vars &amp; procs<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;SWF_uplink">Spellbook</span> - Wizard's spellbook</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;item&#x2F;aiModule">aiModule</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;conservePower">&#x27;ConservePower&#x27; AI Module</span> - ConservePower</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;emergency">&#x27;Emergency&#x27; AI Module</span> - Emergency</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;experimental">experimental</span> - EXPERIMENTAL LAWS<ul class="index-tree">
+    <li><span class="no-substance">equality&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;experimental&#x2F;equality&#x2F;a">Experimental &#x27;Equality&#x27; AI Module</span> - Equality</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;freeform">&#x27;Freeform&#x27; AI Module</span> - Freeform</li>
+    <li><a href="obj/item/aiModule/makeCaptain.html" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;makeCaptain">&#x27;MakeCaptain&#x27; AI Module</a> - Modules</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;notHuman">&#x27;NotHuman&#x27; AI Module</span> - NotHuman</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;oneHuman">&#x27;OneHuman&#x27; AI Module</span> - OneHuman</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;oxygen">&#x27;OxygenIsToxicToHumans&#x27; AI Module</span> - OxygenIsToxicToHumans</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;protectStation">&#x27;ProtectStation&#x27; AI Module</span> - ProtectStation</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;prototypeEngineOffline">&#x27;PrototypeEngineOffline&#x27; AI Module</span> - PrototypeEngineOffline</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;quarantine">&#x27;Quarantine&#x27; AI Module</span> - Quarantine</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;removeCrew">&#x27;RemoveCrew&#x27; AI Module</span> - Removal</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;rename">&#x27;Rename&#x27; AI Module</span> - Rename</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;reset">&#x27;Reset&#x27; AI Module</span> - Reset</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;teleporterOffline">&#x27;TeleporterOffline&#x27; AI Module</span> - TeleporterOffline</li>
+    </ul></li>
+    <li><span class="no-substance">alchemy&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;alchemy&#x2F;stone">philosopher&#x27;s stone</span> - ALCHEMY CIRCLE STUFF</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;ammo">ammo</span> - Parent<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;ammo&#x2F;bullets">Ammo box</span> - Bullets for kinetic firearms</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;ammo&#x2F;power_cell">Power Cell</span> - Power cells for eguns</li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly">assembly</span> - Assembly parent<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;anal_ignite">Health-Analyzer&#x2F;Igniter Assembly</span> - Health analyzer/igniter</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;prox_ignite">Proximity&#x2F;Igniter Assembly</span> - Proximity/igniter</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;proximity_bomb">Proximity&#x2F;Igniter&#x2F;Plasma Tank Assembly</span> - Single tank bomb (proximity)</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;rad_ignite">Radio&#x2F;Igniter Assembly</span> - Remote signaller/igniter</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;rad_infra">Signaller&#x2F;Infrared Assembly</span> - Remote signaller/tripwire assembly</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;rad_prox">Signaller&#x2F;Prox Sensor Assembly</span> - Remote signaller/proximity</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;rad_time">Signaller&#x2F;Timer Assembly</span> - Remote signaller/timer</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;radio_bomb">Radio&#x2F;Igniter&#x2F;Plasma Tank Assembly</span> - Single tank bomb (remote signaller)</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;radio_horn">Radio&#x2F;Horn Assembly</span> - Remote signaller/bike horn</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;time_bomb">Timer&#x2F;Igniter&#x2F;Plasma Tank Assembly</span> - Single tank bomb (timer)</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;assembly&#x2F;time_ignite">Timer&#x2F;Igniter Assembly</span> - Timer/igniter</li>
+    </ul></li>
+    <li><span class="no-substance">audio_tape&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;audio_tape&#x2F;timewarp_00">timewarp_00</span> - audio tapes</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;axe">Axe</span> - Axe</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;banme">ban me</span> - Ban me</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;bat">Baseball Bat</span> - Baseball Bat</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;baton">stun baton</span> - Stun baton parent<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;baton&#x2F;secbot">secbot</span> - Subtypes</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;breaching_charge">Breaching Charge</span> - Breaching charges</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;bucket_sensor">proxy bucket</span> - Cleanbot assembly</li>
+    <li class="has-children"><a href="obj/item/cable_coil.html" title="&#x2F;obj&#x2F;item&#x2F;cable_coil">cable coil</a><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;cable_coil&#x2F;reinforced">reinforced cable coil</span> - REINFORCED CABLE</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;cloner_blueprints_folder">dirty manilla folder</span> - Cloner Blueprints</li>
+    <li class="has-children"><a href="obj/item/clothing.html" title="&#x2F;obj&#x2F;item&#x2F;clothing">clothing</a><ul class="index-tree">
+    <li><span class="no-substance">head&#x2F;helmet&#x2F;hardhat&#x2F;</span><a href="obj/item/clothing/head/helmet/hardhat/security.html" title="&#x2F;obj&#x2F;item&#x2F;clothing&#x2F;head&#x2F;helmet&#x2F;hardhat&#x2F;security">helmet</a></li>
+    <li><span class="no-substance">mask&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;clothing&#x2F;mask&#x2F;cursedclown_hat">cursed clown mask</span> - Cluwne</li>
+    <li><span class="no-substance">suit&#x2F;armor&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;clothing&#x2F;suit&#x2F;armor&#x2F;ancient">ancient armor</span> - cogwerks - reward item, based on the old cyborg suit</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;dagger">sacrificial dagger</span> - Dagger</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;item&#x2F;device">device</span><ul class="index-tree">
+    <li class="has-children"><a href="obj/item/device/analyzer.html" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;analyzer">analyzer</a><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;analyzer&#x2F;atmospheric">atmospheric analyzer</span> - Atmos analyzer</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;analyzer&#x2F;healthanalyzer">health analyzer</span> - Health analyzer</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;chargehacker">geological scanner</span> - MINER TRAITOR ITEM</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;detective_scanner">forensic scanner</span> - Forensic scanner</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;infra">Laser Tripwire</span> - Laser tripwire</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;infra_sensor">Infrared Sensor</span> - Infrared sensor</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;pocketbuddy">Pocketbuddy</span> - proc/hook_event(/event/E, var/)
+evt
+evt/chat
+client/verb/OOC(var/txt as text)
+proc/ChatFilter(var/event/chat/ooc/E)</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;powersink">power sink</span> - datum/pocketbuddy/recognised_categories</li>
+    <li><a href="obj/item/device/prisoner_scanner.html" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;prisoner_scanner">Securotron-5000</a> - Prisoner scanner</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;radio">radio</span><ul class="index-tree">
+    <li><span class="no-substance">beacon&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;radio&#x2F;beacon&#x2F;jones">jones</span> - For the two below, see teleportation.dm</li>
+    <li><span class="no-substance">intercom&#x2F;adventure&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;radio&#x2F;intercom&#x2F;adventure&#x2F;owlery">Owlery Intercom</span> - adventure area intercoms</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;reagentscanner">reagent scanner</span> - Reagent scanner</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;sat_crash_caller">satellite transceiver</span> - crashed sattelite stuff</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;t_scanner">T-ray scanner</span> - T-ray scanner</li>
+    <li><a href="obj/item/device/transfer_valve.html" title="&#x2F;obj&#x2F;item&#x2F;device&#x2F;transfer_valve">tank transfer valve</a></li>
+    </ul></li>
+    <li><span class="no-substance">dynassembly&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;dynassembly&#x2F;fruit">wire</span> - FRUITHAT ASSEMBLIES</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics">electronics</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;board">board</span> - up</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;buzzer">buzzer</span> - up</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;disk">data module</span> - no</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;frame">frame</span> - no<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;frame&#x2F;collector_array">Radiation Collector Array frame</span> - Collector array</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;frame&#x2F;collector_control">Radiation Collector Control frame</span> - Collector array controller</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;keypad">keypad</span> - up</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;scanner">device analyzer</span> - up</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;screen">screen</span> - up</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;electronics&#x2F;soldering">soldering iron</span> - ?</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;fireaxe">fire axe</span> - Fire Axe</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;firework">firework</span> - Fireworks</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gardentrowel">garden trowel</span> - Garden Trowel</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;garrote">fibre wire</span> - Fibre wire</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gimmickbomb">Don&#x27;t spawn this directly!</span> - Gimmick bombs</li>
+    <li class="has-children"><a href="obj/item/gun.html" title="&#x2F;obj&#x2F;item&#x2F;gun">gun</a><ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy">energy</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;bfg">BFG 9000</span> - BFG</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;blaster_pistol">blaster pistol</span> - Modular Blasters</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;crabgun">a strange crab</span> - Crabgun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;crossbow">mini rad-poison-crossbow</span> - Rad Crossbow</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;disruptor">Disruptor</span> - Disruptor</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;egun">energy gun</span> - EGun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;frog">Frog Gun</span> - Frog Gun (Shoots :getin: and :getout:)</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;ghost">ectoplasmic destabilizer</span> - Ghost Gun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;glitch_gun">Glitch Gun</span> - Glitch Gun</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;laser_gun">laser gun</span> - LASERGUN<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;laser_gun&#x2F;antique">antique laser gun</span> - Antique laser gun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;laser_gun&#x2F;pred">laser rifle</span> - Hunter</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;ntgun">Laser Assault Rifle</span> - nanotrasen gun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;owl">Owl gun</span> - Owl Gun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;phaser_gun">phaser gun</span> - Phaser</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;pickpocket">pickpocket grapple gun</span> - Pickpocket Grapple, Grayshift's grif gun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;shrinkray">Shrink ray</span> - Shrink Ray</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;taser_gun">taser gun</span> - TASERGUN</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;tasershotgun">Taser Shotgun</span> - Taser Shotgun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;teleport">teleport gun</span> - Telegun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;tommy_gun">Tommy Gun</span> - Tommy Gun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;vuvuzela_gun">amplified vuvuzela</span> - VUVUV</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;wasp">mini wasp-egg-crossbow</span> - Wasp Gun</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;energy&#x2F;wavegun">Wave Gun</span> - Wave Gun</li>
+    </ul></li>
+    <li><span class="no-substance">kinetic&#x2F;</span><a href="obj/item/gun/kinetic/spes.html" title="&#x2F;obj&#x2F;item&#x2F;gun&#x2F;kinetic&#x2F;spes">SPES-12</a></li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;gun_parts">gun parts</span> - modular components - putting them here so it's easier to work on for now</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;hairball">mystery hairball</span> - hairball key parts</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;hand_tele">hand tele</span> - HAND TELE</li>
+    <li><a href="obj/item/handcuffs.html" title="&#x2F;obj&#x2F;item&#x2F;handcuffs">handcuffs</a></li>
+    <li><span class="no-substance">implant&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;implant&#x2F;syn">syndicate implant</span> - Deprecated</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;katana">katana</span> - Katana</li>
+    <li class="has-children"><span class="no-substance">knife&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;knife&#x2F;butcher">Butcher&#x27;s Knife</span> - Butcher's knife<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;knife&#x2F;butcher&#x2F;predspear">Hunting Spear</span> - Hunter Spear</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;kudzuseed">kudzu seed</span> - obj/item/storage/toolbox/memetic, //naw!</li>
+    <li><a href="obj/item/lilgreg.html" title="&#x2F;obj&#x2F;item&#x2F;lilgreg">Greg Jr</a> - sell list </li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;old_grenade">old grenade</span> - Old-style grenades</li>
+    <li class="has-children"><span class="no-substance">paper&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;paper&#x2F;manufacturer_blueprint">manufacturer_blueprint</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;paper&#x2F;manufacturer_blueprint&#x2F;alastor">alastor</span> - Alastor Pattern Thruster Blueprints</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;paper&#x2F;manufacturer_blueprint&#x2F;loafer">loafer</span> - Loafer Blueprints</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;paper&#x2F;manufacturer_blueprint&#x2F;thrusters">thrusters</span> - Alastor Pattern Thruster Blueprints</li>
+    </ul></li>
+    <li><span class="no-substance">parts&#x2F;robot_parts&#x2F;</span><a href="obj/item/parts/robot_parts/robot_frame.html" title="&#x2F;obj&#x2F;item&#x2F;parts&#x2F;robot_parts&#x2F;robot_frame">robot frame</a></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;plantanalyzer">plant analyzer</span> - Plant analyzer</li>
+    <li><span class="no-substance">power_stones&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;power_stones&#x2F;Owl">Owl</span> - Gimmick Stones</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;reagent_containers">reagent_containers</span><ul class="index-tree">
+    <li><span class="no-substance">food&#x2F;snacks&#x2F;ingredient&#x2F;egg&#x2F;critter&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;reagent_containers&#x2F;food&#x2F;snacks&#x2F;ingredient&#x2F;egg&#x2F;critter&#x2F;wendigo">wendigo egg</span> - e-egg?</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;reagent_containers&#x2F;glass">glass</span><ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;reagent_containers&#x2F;glass&#x2F;bottle">bottle</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;reagent_containers&#x2F;glass&#x2F;bottle&#x2F;poison">poison bottle</span> - cogwerks - adding some new bottles for traitor medics</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;reagent_containers&#x2F;glass&#x2F;bottle&#x2F;weedkiller">weedkiller</span> - Plant formulas</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;reagent_containers&#x2F;glass&#x2F;compostbag">compost bag</span> - Compost bag</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;reagent_containers&#x2F;glass&#x2F;wateringcan">watering can</span> - Watering can</li>
+    </ul></li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;rejuvenation_feather">fiery feather</span> - Mutation orb stuff
+Generic unique items stuff</li>
+    <li><span class="no-substance">remote&#x2F;porter&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;remote&#x2F;porter&#x2F;port_a_brig">Port-A-Brig Remote</span> - Remotes</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;saw">chainsaw</span> - Chainsaw</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;seedplanter">Portable Seed Fabricator</span> - Seed fabricator</li>
+    <li class="has-children"><a href="obj/item/shipcomponent.html" title="&#x2F;obj&#x2F;item&#x2F;shipcomponent">Ship Component</a> - ship components have their work proc called in the vehicle's process<ul class="index-tree">
+    <li><a href="obj/item/shipcomponent/engine.html" title="&#x2F;obj&#x2F;item&#x2F;shipcomponent&#x2F;engine">Warp-1 Engine</a></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;shipcomponent&#x2F;life_support">Nanotrasen Life-Support System</span> - Handles oxygen and heating</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;shipcomponent&#x2F;locomotion">Locomotion</span> - Decides what movement controller the ship uses (These are for vehicle/TANK type only)</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;shovel">rusty old shovel</span> - GRAVEYARD stuff</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;staff">wizard&#x27;s staff</span> - Staves</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;item&#x2F;storage">storage</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;lunchbox">lunchbox</span> - lunchboxes</li>
+    <li><span class="no-substance">toolbox&#x2F;</span><a href="obj/item/storage/toolbox/mechanical.html" title="&#x2F;obj&#x2F;item&#x2F;storage&#x2F;toolbox&#x2F;mechanical">mechanical toolbox</a></li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;sword">cyalume saber</span> - Weapon parent 
+/ Esword ///////</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;teleportation_scroll">Teleportation Scroll</span> - Teleportation scroll</li>
+    <li><span class="no-substance">tool&#x2F;</span><a href="obj/item/tool/omnitool.html" title="&#x2F;obj&#x2F;item&#x2F;tool&#x2F;omnitool">omnitool</a></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;uplink">uplink</span> - Uplink parent<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;uplink&#x2F;integrated">uplink module</span> - Integrated uplinks (PDA &amp; headset)</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;uplink&#x2F;syndicate">station bounced radio</span> - Syndicate uplink</li>
+    </ul></li>
+    </ul></li>
+    <li><span class="no-substance">landmark&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;landmark&#x2F;asteroid_spawn_blocker">asteroid blocker</span> - ASTEROIDS</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;machinery">machinery</span><ul class="index-tree">
+    <li class="has-children"><span title="&#x2F;obj&#x2F;machinery&#x2F;bot">bot</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;bot&#x2F;cleanbot">cleanbot</span> - Cleanbot</li>
+    <li><a href="obj/machinery/bot/guardbot.html" title="&#x2F;obj&#x2F;machinery&#x2F;bot&#x2F;guardbot">Guardbuddy</a></li>
+    </ul></li>
+    <li><span class="no-substance">computer&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;computer&#x2F;announcement">Announcement Computer</span> - General Announcement Computer</li>
+    <li><span class="no-substance">computer3&#x2F;generic&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;computer3&#x2F;generic&#x2F;icemooon">Computer Console</span> - collecting some junk together for the ice moon</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;containment_field">Containment Field</span> - Containment field</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;machinery&#x2F;door">door</span><ul class="index-tree">
+    <li><a href="obj/machinery/door/airlock.html" title="&#x2F;obj&#x2F;machinery&#x2F;door&#x2F;airlock">airlock</a></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;door&#x2F;unpowered">unpowered</span> - Unpowered doors</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;door&#x2F;window">interior door</span> - Sliding door parent<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;door&#x2F;window&#x2F;brigdoor">Brig Door</span> - Brig door</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;door&#x2F;window&#x2F;northleft">northleft</span> - Generic door</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;door&#x2F;window&#x2F;opaque">opaque</span> - Opaque door</li>
+    </ul></li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;drainage">drain</span> - Drainage</li>
+    <li><a href="obj/machinery/driver_button.html" title="&#x2F;obj&#x2F;machinery&#x2F;driver_button">Mass Driver Button</a></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;emitter">Emitter</span> - Emitter</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;field_generator">Field Generator</span> - Pulled from wizard spells might edit later
+///////////////////////////////////// Field generator /////////////////////////////////////////</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;fluid_canister">fluid canister</span> - canister</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;hair_dye_dispenser">Hair Dye Mixer 3000</span> - Dye Bottle Dispenser</li>
+    <li><span class="no-substance">manufacturer&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;manufacturer&#x2F;gas">Gas Extractor</span> - datum/manufacture/hermes) //all hail the shoe lord - needs adjusting for the new movement system which I cba to do right now
+cogwerks - a gas extractor for the engine</li>
+    <li><a href="obj/machinery/microwave.html" title="&#x2F;obj&#x2F;machinery&#x2F;microwave">Microwave</a></li>
+    <li><span class="no-substance">nanofab&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;nanofab&#x2F;refining">Nano-fabricator (Refining)</span> - EXPERIMENTAL ARTIFACT ENGINE RELATED STUFF</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;port_a_brig">Port-A-Brig</span> - Port-a-Brig</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;machinery&#x2F;power">power</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;power&#x2F;debug_generator">mysterious petrol generator</span> - Power machine</li>
+    <li><a href="obj/machinery/power/smes.html" title="&#x2F;obj&#x2F;machinery&#x2F;power&#x2F;smes">power storage unit</a></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;power&#x2F;solar">solar panel</span> - Solar panel</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;power&#x2F;solar_control">solar panel control</span> - Solar control computer</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;power&#x2F;tracker">solar tracker</span> - Solar tracker</li>
+    </ul></li>
+    <li><a href="obj/machinery/r_door_control.html" title="&#x2F;obj&#x2F;machinery&#x2F;r_door_control">Remote Door Control</a> - ////Uses a radio signal to control the door</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;rkit">ruckingenur kit</span> - no</li>
+    <li><a href="obj/machinery/secscanner.html" title="&#x2F;obj&#x2F;machinery&#x2F;secscanner">security scanner</a></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;security_monitor">Security Monitor</span> - turf</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;shieldgenerator">Shield generator parent</span> - Not related to the other shield generator at all.</li>
+    <li><span class="no-substance">shuttle&#x2F;weapon&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;shuttle&#x2F;weapon&#x2F;howitzer">plasma howitzer</span> - SHIP-SCALE WEAPONRY. BEEOO BEEOO HIT THE DECK</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;sleep_console">sleeper console</span> - Sleeper control console</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;sleeper">sleeper</span> - Sleeper</li>
+    <li><a href="obj/machinery/the_singularity.html" title="&#x2F;obj&#x2F;machinery&#x2F;the_singularity">gravitational singularity</a> - Singularity</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;the_singularitybomb">\improper Singularity Bomb</span> - Singularity bomb</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;the_singularitygen">Gravitational Singularity Generator</span> - Singularity generator</li>
+    <li class="has-children"><a href="obj/machinery/vehicle.html" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle">Vehicle Pod</a><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;UFO">Flying Saucer</span> - UFO</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;cargo">Cargo Ship Q5-</span> - /Weapon Setup
+Secondary System
+//Cargo</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;escape_pod">Escape Pod E-</span> - Shitty escape pod that flies by itself for a bit then explodes.</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt">MiniPutt-</span> - miniputt shuttles<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;black">XeniPutt-</span> - strange putt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;gold">PyriPutt-</span> - gold putt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;indyputt">IndyPutt-</span> - engine putt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;iridium">IridiPutt-</span> - iridium putt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;nanoputt">NanoPutt-</span> - nano putt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;pilot">pilot</span> - armed civ putt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;soviputt">Strelka-</span> - soviet putt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;syndiputt">SyndiPutt-</span> - syndicate putt</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;miniputt&#x2F;wizard">MagicPutt-</span> - wizard putt</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;pod">Escape Pod A7-</span> - Escape pod</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;pod_civ">Standard Pod Q5-</span> - cogpod test</li>
+    <li><a href="obj/machinery/vehicle/pod_smooth.html" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;pod_smooth">Pod C-</a> - Also a Test</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vehicle&#x2F;recon">Reconaissance Ship 7X-</span> - Recon</li>
+    </ul></li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vending">vending</span><ul class="index-tree">
+    <li><span class="no-substance">paint&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vending&#x2F;paint&#x2F;broken">Broken Paint Dispenser</span> - broken paint vending machine</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;machinery&#x2F;vending&#x2F;port_a_nanomed">Port-A-NanoMed</span> - Port-a-NanoMed</li>
+    </ul></li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;magicmirror">Magic Mirror</span> - Magic mirror</li>
+    <li><span class="no-substance">newmeteor&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;newmeteor&#x2F;massive">huge asteroid</span> - HUGE</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;npc">npc</span><ul class="index-tree">
+    <li><a href="obj/npc/station_trader.html" title="&#x2F;obj&#x2F;npc&#x2F;station_trader">Shady Robot</a></li>
+    <li class="has-children"><a href="obj/npc/trader.html" title="&#x2F;obj&#x2F;npc&#x2F;trader">Trader</a><ul class="index-tree">
+    <li><a href="obj/npc/trader/bee.html" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;bee">Bombini</a> - BZZZZZZZZZZZ</li>
+    <li><a href="obj/npc/trader/chad.html" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;chad">Chad</a> - sell list </li>
+    <li><a href="obj/npc/trader/exclown.html" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;exclown">Geoff Honkington</a></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;greg">Greg</span> - GREG THE COOL AWESOME ROBOT TRADER</li>
+    <li><a href="obj/npc/trader/hand.html" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;hand">A hand sticking out from a toilet</a> - sell list </li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;martian">martian</span> - Martian</li>
+    <li><a href="obj/npc/trader/random.html" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;random">random</a> - /////////THE TRADERS ///////////////////////////</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;robot">robot</span> - Robot</li>
+    <li><a href="obj/npc/trader/twins.html" title="&#x2F;obj&#x2F;npc&#x2F;trader&#x2F;twins">Carol and Lynn</a> - sell list </li>
+    </ul></li>
+    </ul></li>
+    <li><a href="obj/placeholder.html" title="&#x2F;obj&#x2F;placeholder">Placeholder Object</a></li>
+    <li><span class="no-substance">portal&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;portal&#x2F;wormhole">wormhole</span> - You will appear adjacent to the beacon</li>
+    <li class="has-children"><a href="obj/screen.html" title="&#x2F;obj&#x2F;screen">screen</a> - SETTING UP THE GAME<ul class="index-tree">
+    <li class="has-children"><span class="no-substance">ability&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar">topBar</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar&#x2F;grinch">grinch</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar&#x2F;hunter">hunter</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar&#x2F;merchant">merchant</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar&#x2F;spell">spell</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar&#x2F;vampire">vampire</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar&#x2F;vampiric_zombie">vampiric_zombie</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar&#x2F;werewolf">werewolf</span> - Ability holder</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;screen&#x2F;ability&#x2F;topBar&#x2F;wrestler">wrestler</span> - Ability holder</li>
+    </ul></li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;sea_ladder_deployed">deployed sea ladder</span> - canister</li>
+    <li><a href="obj/solar_control.html" title="&#x2F;obj&#x2F;solar_control">solar panel servo</a> - Solar Panel thingamajig</li>
+    <li><span class="no-substance">storage&#x2F;closet&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;storage&#x2F;closet&#x2F;port_a_sci">Port-A-Sci</span> - /// Port-a-Medbay 
+Port-a-Sci //////</li>
+    <li class="has-children"><span title="&#x2F;obj&#x2F;submachine">submachine</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;submachine&#x2F;chem_extractor">Reagent Extractor</span> - Reagent Extractor</li>
+    <li><a href="obj/submachine/record_player.html" title="&#x2F;obj&#x2F;submachine&#x2F;record_player">record player</a></li>
+    <li><a href="obj/submachine/tape_deck.html" title="&#x2F;obj&#x2F;submachine&#x2F;tape_deck">tape deck</a></li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;torpedo_targeter">torpedo_targeter</span> - BASE STUFF BELOW</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;trigger">trigger</span> - Trigger</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;vehicle">vehicle</span> - Vehicle parent<ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;vehicle&#x2F;adminbus">Admin Bus</span> - Admin bus<ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;vehicle&#x2F;adminbus&#x2F;battlebus">Battle Bus</span> - Battle Bus</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;vehicle&#x2F;cat">Rideable Cat</span> - Rideable cats</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;vehicle&#x2F;clowncar">Clown Car</span> - Clown car</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;vehicle&#x2F;floorbuffer">\improper Buff-R-Matic 3000</span> - Floor buffer</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;vehicle&#x2F;forklift">forklift</span> - Forklift</li>
+    <li><span class="no-substance" title="&#x2F;obj&#x2F;vehicle&#x2F;segway">\improper Space Segway</span> - Segway</li>
+    </ul></li>
+    </ul></li>
+    <li class="has-children"><a href="turf.html" title="&#x2F;turf">turf</a><ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;turf&#x2F;simulated">station</span> - turf/simulated/floor/Entered(atom/movable/A, atom/OL) //this used to run on every simulated turf (yes walls too!) -zewaka<ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;turf&#x2F;simulated&#x2F;floor">floor</span><ul class="index-tree">
+    <li><span class="no-substance">airless&#x2F;</span><span class="no-substance" title="&#x2F;turf&#x2F;simulated&#x2F;floor&#x2F;airless&#x2F;solar">solar</span> - SPECIAL AIRLESS-ONLY TURFS</li>
+    <li><span class="no-substance" title="&#x2F;turf&#x2F;simulated&#x2F;floor&#x2F;arctic_elevator_shaft">elevator shaft</span> - Ice Moon Adventure Zone (surface)
+Contents:
+Turfs:
+Elevator Shaft Fall
+Snow
+Ice Walls
+Ice Lake
+Cold Plating
+Abyss Fall
+Cliff Edges</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;turf&#x2F;simulated&#x2F;martian">martian</span> - Martian Turf stuff</li>
+    <li><span class="no-substance" title="&#x2F;turf&#x2F;simulated&#x2F;shuttle">shuttle wall</span> - TURFS</li>
+    <li><span class="no-substance">wall&#x2F;</span><span class="no-substance" title="&#x2F;turf&#x2F;simulated&#x2F;wall&#x2F;ancient">strange wall</span> - Shit that goes in the asteroid belt, might split it into an exploring.dm later i guess</li>
+    </ul></li>
+    <li><span class="no-substance">space&#x2F;fluid&#x2F;</span><span class="no-substance" title="&#x2F;turf&#x2F;space&#x2F;fluid&#x2F;warp_z5">deep hole</span> - duh look below</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;turf&#x2F;unsimulated">unsimulated</span><ul class="index-tree">
+    <li class="has-children"><span class="no-substance" title="&#x2F;turf&#x2F;unsimulated&#x2F;floor">floor</span><ul class="index-tree">
+    <li><span class="no-substance" title="&#x2F;turf&#x2F;unsimulated&#x2F;floor&#x2F;lava">Lava</span> - cogwerks - lava turf</li>
+    <li><span class="no-substance">void&#x2F;</span><span class="no-substance" title="&#x2F;turf&#x2F;unsimulated&#x2F;floor&#x2F;void&#x2F;timewarp">time-space breach</span> - turfs</li>
+    </ul></li>
+    <li><span class="no-substance" title="&#x2F;turf&#x2F;unsimulated&#x2F;greek">Greek Adventurezone Sprites</span> - Greek Adventurezone Thingy</li>
+    <li class="has-children"><span class="no-substance" title="&#x2F;turf&#x2F;unsimulated&#x2F;wall">wall</span><ul class="index-tree">
+    <li><span class="no-substance">arctic&#x2F;</span><span class="no-substance" title="&#x2F;turf&#x2F;unsimulated&#x2F;wall&#x2F;arctic&#x2F;abyss">deep abyss</span> - WALLS</li>
+    <li><span class="no-substance" title="&#x2F;turf&#x2F;unsimulated&#x2F;wall&#x2F;setpieces">setpieces</span> - /////////////////////ADVENTURE SIMULATED FLOORS////////////////////////
+///////////////////////UNSIMULATED//////////////////////////////////////
+cogwerks - setpiece stuff</li>
+    </ul></li>
+    </ul></li>
+    </ul></li>
+    <li><a href="world.html" title="&#x2F;world">World</a> - If you think this Universe is bad, you should see some of the others. ~ Philip K. Dick</li>
+    </ul>
+
+
+</main>
+<footer>
+    goonstation.dme
+    <a href="https://github.com/goonstation/goonstation/tree/e4223d0fa86c6f051336defac3dbcf69d48f996e">e4223d0</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.2</a></footer>
+</body>
+</html>

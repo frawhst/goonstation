@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;atom - Goon Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Goon Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="atom.html#var">Var Details</a> - <a href="atom.html#proc">Proc Details</a></header>
+<main>
+<h1>/<a href="atom.html">atom</a><aside> inherits /<a href="datum.html">datum</a></aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L89">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 89"/></a></h1>
+
+<p>The base type for nearly all physical objects in SS13</p>
+<p>Lots of functionality resides in this type.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="atom.html#var/mat_changeappearance">mat_changeappearance</a></th><td>Change the appearance of this atom when a material is applied?</td></tr>
+            <tr><th><a href="atom.html#var/mat_changedesc">mat_changedesc</a></th><td>Change the desc of this atom when a material is applied?</td></tr>
+            <tr><th><a href="atom.html#var/mat_changename">mat_changename</a></th><td>Change the name of this atom when a material is applied?</td></tr>
+            <tr><th><a href="atom.html#var/open_to_sound">open_to_sound</a></th><td>If hear_talk is triggered on this object, make my contents hear_talk as well</td></tr>
+            <tr><th><a href="atom.html#var/reagents">reagents</a></th><td>Chemistry.</td></tr>
+            <tr><th><a href="atom.html#var/texture_size">texture_size</a></th><td>Override for the texture size used by setTexture.</td></tr>
+            <tr><th><a href="atom.html#var/throw_unlimited">throw_unlimited</a></th><td>EXPERIMENTAL STUFF</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="atom.html#proc/add_sm_light">add_sm_light</a></th><td>light.pixel_x = (vx * min(dist,light.dist) * 32) - 32</td></tr>
+            <tr><th><a href="atom.html#proc/attackby">attackby</a></th><td>( istype(W, /obj/item/grab)  || istype(W, /obj/item/spraybottle) || istype(W, /obj/item/card/emag)))</td></tr>
+            <tr><th><a href="atom.html#proc/blob_act">blob_act</a></th><td>BLOB RELATED PROCS</td></tr>
+            <tr><th><a href="atom.html#proc/clean_name">clean_name</a></th><td>Gets the atoms name with all the ugly prefixes things remove</td></tr>
+            <tr><th><a href="atom.html#proc/contents_ui_distance">contents_ui_distance</a></th><td>public</td></tr>
+            <tr><th><a href="atom.html#proc/damage_blunt">damage_blunt</a></th><td>Does x blunt damage to the atom</td></tr>
+            <tr><th><a href="atom.html#proc/damage_cold">damage_cold</a></th><td>Does x cold damage to the atom</td></tr>
+            <tr><th><a href="atom.html#proc/damage_corrosive">damage_corrosive</a></th><td>Does x corrosive damage to the atom</td></tr>
+            <tr><th><a href="atom.html#proc/damage_electricity">damage_electricity</a></th><td>Does x electricity damage to the atom</td></tr>
+            <tr><th><a href="atom.html#proc/damage_heat">damage_heat</a></th><td>does x heat damage to the atom</td></tr>
+            <tr><th><a href="atom.html#proc/damage_piercing">damage_piercing</a></th><td>Does x piercing damage to the atom</td></tr>
+            <tr><th><a href="atom.html#proc/damage_radiation">damage_radiation</a></th><td>Does x radiation damage to the atom</td></tr>
+            <tr><th><a href="atom.html#proc/damage_slashing">damage_slashing</a></th><td>Does x slashing damage to the atom</td></tr>
+            <tr><th><a href="atom.html#proc/isInContents">isInContents</a></th><td>Returns true if a given atom is within a given holder's contents</td></tr>
+            <tr><th><a href="atom.html#proc/is_open_container">is_open_container</a></th><td>Convenience proc to see if a container is open for chemistry handling</td></tr>
+            <tr><th><a href="atom.html#proc/safe_name">safe_name</a></th><td>clean_name(), but encoded too since everything ever uses HTML in the game.</td></tr>
+            <tr><th><a href="atom.html#proc/special_desc">special_desc</a></th><td></td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/mat_changeappearance"><aside class="declaration">var </aside>mat_changeappearance
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L211">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 211"/></a></h3>
+        <p>Change the appearance of this atom when a material is applied?</p><h3 id="var/mat_changedesc"><aside class="declaration">var </aside>mat_changedesc
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L208">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 208"/></a></h3>
+        <p>Change the desc of this atom when a material is applied?</p><h3 id="var/mat_changename"><aside class="declaration">var </aside>mat_changename
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L205">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 205"/></a></h3>
+        <p>Change the name of this atom when a material is applied?</p><h3 id="var/open_to_sound"><aside class="declaration">var </aside>open_to_sound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L104">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 104"/></a></h3>
+        <p>If hear_talk is triggered on this object, make my contents hear_talk as well</p><h3 id="var/reagents"><aside class="declaration">var </aside>reagents
+            <aside>&ndash; /<a href="datum.html">datum</a>/reagents</aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L217">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 217"/></a></h3>
+        <p>Chemistry.</p><h3 id="var/texture_size"><aside class="declaration">var </aside>texture_size
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L101">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 101"/></a></h3>
+        <p>Override for the texture size used by setTexture.</p><h3 id="var/throw_unlimited"><aside class="declaration">var </aside>throw_unlimited
+            <aside>&ndash; /tmp</aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom/throwing.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom&#x2F;throwing.dm 1"/></a></h3>
+        <p>EXPERIMENTAL STUFF</p><h2 id="proc">Proc Details</h2><h3 id="proc/add_sm_light"><aside class="declaration">proc </aside>add_sm_light<aside>(id, /list/rgba, medium, directional) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/SimpleLight.dm#L395">
+        <img src="git.png" width="16" height="16" title="code&#x2F;SimpleLight.dm 395"/></a></aside>
+        </h3>
+        <p>light.pixel_x = (vx * min(dist,light.dist) * 32) - 32</p><h3 id="proc/attackby"><aside class="declaration">proc </aside>attackby<aside>(/<a href="obj.html">obj</a>/item/W, /<a href="mob.html">mob</a>/user, params, is_special) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L699">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 699"/></a></aside>
+        </h3>
+        <p>( istype(W, /obj/item/grab)  || istype(W, /obj/item/spraybottle) || istype(W, /obj/item/card/emag)))</p><h3 id="proc/blob_act"><aside class="declaration">proc </aside>blob_act<aside>(power) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/obj/blob.dm#L1244">
+        <img src="git.png" width="16" height="16" title="code&#x2F;obj&#x2F;blob.dm 1244"/></a></aside>
+        </h3>
+        <p>BLOB RELATED PROCS</p><h3 id="proc/clean_name"><aside class="declaration">proc </aside>clean_name<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L110">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 110"/></a></aside>
+        </h3>
+        <p>Gets the atoms name with all the ugly prefixes things remove</p><h3 id="proc/contents_ui_distance"><aside class="declaration">proc </aside>contents_ui_distance<aside>(src_object, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/modules/tgui/states.dm#L102">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;states.dm 102"/></a></aside>
+        </h3>
+        <p>public</p>
+<p>Check the distance for a living mob.
+Really only used for checks outside the context of a mob.
+Otherwise, use shared_living_ui_distance().</p>
+<p>required src_object The object which owns the UI.
+required user mob The mob who opened/is using the UI.</p>
+<p>return UI_state The state of the UI.</p><h3 id="proc/damage_blunt"><aside class="declaration">proc </aside>damage_blunt<aside>(amount) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L991">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 991"/></a></aside>
+        </h3>
+        <p>Does x blunt damage to the atom</p><h3 id="proc/damage_cold"><aside class="declaration">proc </aside>damage_cold<aside>(amount) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L1012">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 1012"/></a></aside>
+        </h3>
+        <p>Does x cold damage to the atom</p><h3 id="proc/damage_corrosive"><aside class="declaration">proc </aside>damage_corrosive<aside>(amount) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L1000">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 1000"/></a></aside>
+        </h3>
+        <p>Does x corrosive damage to the atom</p><h3 id="proc/damage_electricity"><aside class="declaration">proc </aside>damage_electricity<aside>(amount) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L1003">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 1003"/></a></aside>
+        </h3>
+        <p>Does x electricity damage to the atom</p><h3 id="proc/damage_heat"><aside class="declaration">proc </aside>damage_heat<aside>(amount) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L1009">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 1009"/></a></aside>
+        </h3>
+        <p>does x heat damage to the atom</p><h3 id="proc/damage_piercing"><aside class="declaration">proc </aside>damage_piercing<aside>(amount) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L994">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 994"/></a></aside>
+        </h3>
+        <p>Does x piercing damage to the atom</p><h3 id="proc/damage_radiation"><aside class="declaration">proc </aside>damage_radiation<aside>(amount) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L1006">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 1006"/></a></aside>
+        </h3>
+        <p>Does x radiation damage to the atom</p><h3 id="proc/damage_slashing"><aside class="declaration">proc </aside>damage_slashing<aside>(amount) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L997">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 997"/></a></aside>
+        </h3>
+        <p>Does x slashing damage to the atom</p><h3 id="proc/isInContents"><aside class="declaration">proc </aside>isInContents<aside>(/<a href="atom.html">atom</a>/item, /<a href="atom.html">atom</a>/holder) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/procs/helpers.dm#L2363">
+        <img src="git.png" width="16" height="16" title="code&#x2F;procs&#x2F;helpers.dm 2363"/></a></aside>
+        </h3>
+        <p>Returns true if a given atom is within a given holder's contents</p><h3 id="proc/is_open_container"><aside class="declaration">proc </aside>is_open_container<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L262">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 262"/></a></aside>
+        </h3>
+        <p>Convenience proc to see if a container is open for chemistry handling</p>
+<ul>
+<li>returns true if open, false if closed</li>
+</ul><h3 id="proc/safe_name"><aside class="declaration">proc </aside>safe_name<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L114">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 114"/></a></aside>
+        </h3>
+        <p>clean_name(), but encoded too since everything ever uses HTML in the game.</p><h3 id="proc/special_desc"><aside class="declaration">proc </aside>special_desc<aside>(dist, /<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/atom.dm#L650">
+        <img src="git.png" width="16" height="16" title="code&#x2F;atom.dm 650"/></a></aside>
+        </h3>
+        <ul>
+<li>a proc to completely override the standard formatting for examine text
+<ul>
+<li>to prevent more copy paste</li>
+</ul>
+</li>
+</ul></main>
+<footer>
+    goonstation.dme
+    <a href="https://github.com/goonstation/goonstation/tree/e4223d0fa86c6f051336defac3dbcf69d48f996e">e4223d0</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.2</a></footer>
+</body>
+</html>

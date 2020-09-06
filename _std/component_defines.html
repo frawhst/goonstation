@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>_std&#x2F;component_defines.dm - Goon Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Goon Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="_std/component_defines.html#define">Define Details</a></header>
+<main>
+<h1>_std/component_defines.dm 
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="_std/component_defines.html#define/SEND_SIGNAL">SEND_SIGNAL</a></th><td>Used to trigger signals and call procs registered for that signal
+The datum hosting the signal is automaticaly added as the first argument
+Returns a bitfield gathered from all registered procs
+Arguments given here are packaged in a list and given to _SendSignal</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/GLOBAL_SIGNAL">GLOBAL_SIGNAL</a></th><td><code>target</code> to use for signals that are global and not tied to a single datum.
+Note that this does NOT work with SEND_SIGNAL because of preprocessor weirdness.
+Use SEND_GLOBAL_SIGNAL instead.</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/AddComponent">AddComponent</a></th><td>A wrapper for _AddComponent that allows us to pretend we're using normal named arguments</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMPONENT_INCOMPATIBLE">COMPONENT_INCOMPATIBLE</a></th><td>Return this from <code>/datum/component/Initialize</code> or <code>datum/component/OnTransfer</code> to have the component be deleted if it's applied to an incorrect type.
+<code>parent</code> must not be modified if this is to be returned.
+This will be noted in the runtime logs</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMPONENT_NOTRANSFER">COMPONENT_NOTRANSFER</a></th><td>Returned in PostTransfer to prevent transfer, similar to <code>COMPONENT_INCOMPATIBLE</code></td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMPONENT_DUPE_HIGHLANDER">COMPONENT_DUPE_HIGHLANDER</a></th><td>old component is deleted (default)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMPONENT_DUPE_ALLOWED">COMPONENT_DUPE_ALLOWED</a></th><td>duplicates allowed</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMPONENT_DUPE_UNIQUE">COMPONENT_DUPE_UNIQUE</a></th><td>new component is deleted</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMPONENT_DUPE_UNIQUE_PASSARGS">COMPONENT_DUPE_UNIQUE_PASSARGS</a></th><td>old component is given the initialization args of the new</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMPONENT_DUPE_SELECTIVE">COMPONENT_DUPE_SELECTIVE</a></th><td>each component of the same type is consulted as to whether the duplicate should be allowed</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_COMPONENT_ADDED">COMSIG_COMPONENT_ADDED</a></th><td>when a component is added to a datum: (/datum/component)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_COMPONENT_REMOVING">COMSIG_COMPONENT_REMOVING</a></th><td>before a component is removed from a datum because of RemoveComponent: (/datum/component)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_PARENT_PRE_DISPOSING">COMSIG_PARENT_PRE_DISPOSING</a></th><td>just before a datum's disposing()</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MOVABLE_MOVED">COMSIG_MOVABLE_MOVED</a></th><td>when an AM moves (user, previous_loc, direction)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_ITEM_EQUIPPED">COMSIG_ITEM_EQUIPPED</a></th><td>When an item is equipped (user, slot)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_ITEM_UNEQUIPPED">COMSIG_ITEM_UNEQUIPPED</a></th><td>When an item is unequipped (user)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_ITEM_PICKUP">COMSIG_ITEM_PICKUP</a></th><td>When an item is picked up (user)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_ITEM_DROPPED">COMSIG_ITEM_DROPPED</a></th><td>When an item is picked dropped (user)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_ITEM_ATTACK_POST">COMSIG_ITEM_ATTACK_POST</a></th><td>When an item is used to attack a mob</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_ITEM_BLOCK_BEGIN">COMSIG_ITEM_BLOCK_BEGIN</a></th><td>After  an item block is set up</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_ITEM_BLOCK_END">COMSIG_ITEM_BLOCK_END</a></th><td>When an item block is disposed</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_UNARMED_BLOCK_BEGIN">COMSIG_UNARMED_BLOCK_BEGIN</a></th><td>After an unarmed block is set up</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_UNARMED_BLOCK_END">COMSIG_UNARMED_BLOCK_END</a></th><td>When an item block is created</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_HUMAN_LIFE_TICK">COMSIG_HUMAN_LIFE_TICK</a></th><td>when a human Life tick occurs</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MOB_ATTACKED_PRE">COMSIG_MOB_ATTACKED_PRE</a></th><td>At the beginning of when an attackresults datum is being set up</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_ATTACKBY">COMSIG_ATTACKBY</a></th><td>Attacking wiht an item in-hand</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIGBIT_ATTACKBY_COMPLETE">COMSIGBIT_ATTACKBY_COMPLETE</a></th><td>Bitflag return of an attackby proc successfuly reacting (based on it's own conditions)
+I dunno, feel free to improve this; make global bitflag returns for all components.</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_PROJ_COLLIDE">COMSIG_PROJ_COLLIDE</a></th><td>After a projectile makes a valid hit on an atom (after immunity/other early returns, before other effects)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MECHCOMP_ADD_INPUT">COMSIG_MECHCOMP_ADD_INPUT</a></th><td>Add an input chanel for a device to send into</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MECHCOMP_ADD_CONFIG">COMSIG_MECHCOMP_ADD_CONFIG</a></th><td>Connect two mechcomp devices together</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MECHCOMP_ALLOW_MANUAL_SIGNAL">COMSIG_MECHCOMP_ALLOW_MANUAL_SIGNAL</a></th><td>Connect two mechcomp devices together</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MECHCOMP_RM_ALL_CONNECTIONS">COMSIG_MECHCOMP_RM_ALL_CONNECTIONS</a></th><td>Remove all connected devices</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MECHCOMP_TRANSMIT_SIGNAL">COMSIG_MECHCOMP_TRANSMIT_SIGNAL</a></th><td>Passing the signal of a message to all connected mechcomp devices for handling (message will be instatiated by the component)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MECHCOMP_TRANSMIT_MSG">COMSIG_MECHCOMP_TRANSMIT_MSG</a></th><td>Passing a message to all connected mechcomp devices for handling</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/COMSIG_MECHCOMP_TRANSMIT_DEFAULT_MSG">COMSIG_MECHCOMP_TRANSMIT_DEFAULT_MSG</a></th><td>Passing the stored message to all connected mechcomp devices for handling</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_RECEIVE_MSG">_COMSIG_MECHCOMP_RECEIVE_MSG</a></th><td>Receiving a message from a mechcomp device for handling</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_RM_INCOMING">_COMSIG_MECHCOMP_RM_INCOMING</a></th><td>Remove [the caller] from the list of transmitting devices</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_RM_OUTGOING">_COMSIG_MECHCOMP_RM_OUTGOING</a></th><td>Remove [the caller] from the list of receiving devices</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_GET_OUTGOING">_COMSIG_MECHCOMP_GET_OUTGOING</a></th><td>Return the component's outgoing connections</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_GET_INCOMING">_COMSIG_MECHCOMP_GET_INCOMING</a></th><td>Return the component's incoming connections</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_DROPCONNECT">_COMSIG_MECHCOMP_DROPCONNECT</a></th><td>Begin to connect two mechcomp devices together</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_LINK">_COMSIG_MECHCOMP_LINK</a></th><td>Connect one MechComp compatible device as a receiver to a trigger. (This is meant to be a private method)</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_COMPATIBLE">_COMSIG_MECHCOMP_COMPATIBLE</a></th><td>Returns 1</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_DISPATCH_ADD_FILTER">_COMSIG_MECHCOMP_DISPATCH_ADD_FILTER</a></th><td>Add a filtered connection, getting user input on the filter</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_DISPATCH_RM_OUTGOING">_COMSIG_MECHCOMP_DISPATCH_RM_OUTGOING</a></th><td>Remove a filtered connection</td></tr>
+        <tr><th><a href="_std/component_defines.html#define/_COMSIG_MECHCOMP_DISPATCH_VALIDATE">_COMSIG_MECHCOMP_DISPATCH_VALIDATE</a></th><td>Test a signal to be sent to a connection</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/AddComponent"><aside class="declaration">#define </aside>AddComponent
+            <aside>(arguments ...)</aside>
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L15">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 15"/></a>
+    </h3>
+    <p>A wrapper for _AddComponent that allows us to pretend we're using normal named arguments</p><h3 id="define/COMPONENT_DUPE_ALLOWED"><aside class="declaration">#define </aside>COMPONENT_DUPE_ALLOWED
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L28">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 28"/></a>
+    </h3>
+    <p>duplicates allowed</p><h3 id="define/COMPONENT_DUPE_HIGHLANDER"><aside class="declaration">#define </aside>COMPONENT_DUPE_HIGHLANDER
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L26">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 26"/></a>
+    </h3>
+    <p>old component is deleted (default)</p><h3 id="define/COMPONENT_DUPE_SELECTIVE"><aside class="declaration">#define </aside>COMPONENT_DUPE_SELECTIVE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L34">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 34"/></a>
+    </h3>
+    <p>each component of the same type is consulted as to whether the duplicate should be allowed</p><h3 id="define/COMPONENT_DUPE_UNIQUE"><aside class="declaration">#define </aside>COMPONENT_DUPE_UNIQUE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L30">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 30"/></a>
+    </h3>
+    <p>new component is deleted</p><h3 id="define/COMPONENT_DUPE_UNIQUE_PASSARGS"><aside class="declaration">#define </aside>COMPONENT_DUPE_UNIQUE_PASSARGS
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L32">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 32"/></a>
+    </h3>
+    <p>old component is given the initialization args of the new</p><h3 id="define/COMPONENT_INCOMPATIBLE"><aside class="declaration">#define </aside>COMPONENT_INCOMPATIBLE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L20">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 20"/></a>
+    </h3>
+    <p>Return this from <code>/datum/component/Initialize</code> or <code>datum/component/OnTransfer</code> to have the component be deleted if it's applied to an incorrect type.
+<code>parent</code> must not be modified if this is to be returned.
+This will be noted in the runtime logs</p><h3 id="define/COMPONENT_NOTRANSFER"><aside class="declaration">#define </aside>COMPONENT_NOTRANSFER
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L22">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 22"/></a>
+    </h3>
+    <p>Returned in PostTransfer to prevent transfer, similar to <code>COMPONENT_INCOMPATIBLE</code></p><h3 id="define/COMSIGBIT_ATTACKBY_COMPLETE"><aside class="declaration">#define </aside>COMSIGBIT_ATTACKBY_COMPLETE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L94">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 94"/></a>
+    </h3>
+    <p>Bitflag return of an attackby proc successfuly reacting (based on it's own conditions)
+I dunno, feel free to improve this; make global bitflag returns for all components.</p><h3 id="define/COMSIG_ATTACKBY"><aside class="declaration">#define </aside>COMSIG_ATTACKBY
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L91">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 91"/></a>
+    </h3>
+    <p>Attacking wiht an item in-hand</p><h3 id="define/COMSIG_COMPONENT_ADDED"><aside class="declaration">#define </aside>COMSIG_COMPONENT_ADDED
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L42">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 42"/></a>
+    </h3>
+    <p>when a component is added to a datum: (/datum/component)</p><h3 id="define/COMSIG_COMPONENT_REMOVING"><aside class="declaration">#define </aside>COMSIG_COMPONENT_REMOVING
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L44">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 44"/></a>
+    </h3>
+    <p>before a component is removed from a datum because of RemoveComponent: (/datum/component)</p><h3 id="define/COMSIG_HUMAN_LIFE_TICK"><aside class="declaration">#define </aside>COMSIG_HUMAN_LIFE_TICK
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L77">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 77"/></a>
+    </h3>
+    <p>when a human Life tick occurs</p><h3 id="define/COMSIG_ITEM_ATTACK_POST"><aside class="declaration">#define </aside>COMSIG_ITEM_ATTACK_POST
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L64">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 64"/></a>
+    </h3>
+    <p>When an item is used to attack a mob</p><h3 id="define/COMSIG_ITEM_BLOCK_BEGIN"><aside class="declaration">#define </aside>COMSIG_ITEM_BLOCK_BEGIN
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L68">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 68"/></a>
+    </h3>
+    <p>After  an item block is set up</p><h3 id="define/COMSIG_ITEM_BLOCK_END"><aside class="declaration">#define </aside>COMSIG_ITEM_BLOCK_END
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L70">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 70"/></a>
+    </h3>
+    <p>When an item block is disposed</p><h3 id="define/COMSIG_ITEM_DROPPED"><aside class="declaration">#define </aside>COMSIG_ITEM_DROPPED
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L62">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 62"/></a>
+    </h3>
+    <p>When an item is picked dropped (user)</p><h3 id="define/COMSIG_ITEM_EQUIPPED"><aside class="declaration">#define </aside>COMSIG_ITEM_EQUIPPED
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L56">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 56"/></a>
+    </h3>
+    <p>When an item is equipped (user, slot)</p><h3 id="define/COMSIG_ITEM_PICKUP"><aside class="declaration">#define </aside>COMSIG_ITEM_PICKUP
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L60">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 60"/></a>
+    </h3>
+    <p>When an item is picked up (user)</p><h3 id="define/COMSIG_ITEM_UNEQUIPPED"><aside class="declaration">#define </aside>COMSIG_ITEM_UNEQUIPPED
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L58">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 58"/></a>
+    </h3>
+    <p>When an item is unequipped (user)</p><h3 id="define/COMSIG_MECHCOMP_ADD_CONFIG"><aside class="declaration">#define </aside>COMSIG_MECHCOMP_ADD_CONFIG
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L106">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 106"/></a>
+    </h3>
+    <p>Connect two mechcomp devices together</p><h3 id="define/COMSIG_MECHCOMP_ADD_INPUT"><aside class="declaration">#define </aside>COMSIG_MECHCOMP_ADD_INPUT
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L104">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 104"/></a>
+    </h3>
+    <p>Add an input chanel for a device to send into</p><h3 id="define/COMSIG_MECHCOMP_ALLOW_MANUAL_SIGNAL"><aside class="declaration">#define </aside>COMSIG_MECHCOMP_ALLOW_MANUAL_SIGNAL
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L108">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 108"/></a>
+    </h3>
+    <p>Connect two mechcomp devices together</p><h3 id="define/COMSIG_MECHCOMP_RM_ALL_CONNECTIONS"><aside class="declaration">#define </aside>COMSIG_MECHCOMP_RM_ALL_CONNECTIONS
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L110">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 110"/></a>
+    </h3>
+    <p>Remove all connected devices</p><h3 id="define/COMSIG_MECHCOMP_TRANSMIT_DEFAULT_MSG"><aside class="declaration">#define </aside>COMSIG_MECHCOMP_TRANSMIT_DEFAULT_MSG
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L116">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 116"/></a>
+    </h3>
+    <p>Passing the stored message to all connected mechcomp devices for handling</p><h3 id="define/COMSIG_MECHCOMP_TRANSMIT_MSG"><aside class="declaration">#define </aside>COMSIG_MECHCOMP_TRANSMIT_MSG
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L114">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 114"/></a>
+    </h3>
+    <p>Passing a message to all connected mechcomp devices for handling</p><h3 id="define/COMSIG_MECHCOMP_TRANSMIT_SIGNAL"><aside class="declaration">#define </aside>COMSIG_MECHCOMP_TRANSMIT_SIGNAL
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L112">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 112"/></a>
+    </h3>
+    <p>Passing the signal of a message to all connected mechcomp devices for handling (message will be instatiated by the component)</p><h3 id="define/COMSIG_MOB_ATTACKED_PRE"><aside class="declaration">#define </aside>COMSIG_MOB_ATTACKED_PRE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L81">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 81"/></a>
+    </h3>
+    <p>At the beginning of when an attackresults datum is being set up</p><h3 id="define/COMSIG_MOVABLE_MOVED"><aside class="declaration">#define </aside>COMSIG_MOVABLE_MOVED
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L51">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 51"/></a>
+    </h3>
+    <p>when an AM moves (user, previous_loc, direction)</p><h3 id="define/COMSIG_PARENT_PRE_DISPOSING"><aside class="declaration">#define </aside>COMSIG_PARENT_PRE_DISPOSING
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L46">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 46"/></a>
+    </h3>
+    <p>just before a datum's disposing()</p><h3 id="define/COMSIG_PROJ_COLLIDE"><aside class="declaration">#define </aside>COMSIG_PROJ_COLLIDE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L99">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 99"/></a>
+    </h3>
+    <p>After a projectile makes a valid hit on an atom (after immunity/other early returns, before other effects)</p><h3 id="define/COMSIG_UNARMED_BLOCK_BEGIN"><aside class="declaration">#define </aside>COMSIG_UNARMED_BLOCK_BEGIN
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L72">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 72"/></a>
+    </h3>
+    <p>After an unarmed block is set up</p><h3 id="define/COMSIG_UNARMED_BLOCK_END"><aside class="declaration">#define </aside>COMSIG_UNARMED_BLOCK_END
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L74">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 74"/></a>
+    </h3>
+    <p>When an item block is created</p><h3 id="define/GLOBAL_SIGNAL"><aside class="declaration">#define </aside>GLOBAL_SIGNAL
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L10">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 10"/></a>
+    </h3>
+    <p><code>target</code> to use for signals that are global and not tied to a single datum.
+Note that this does NOT work with SEND_SIGNAL because of preprocessor weirdness.
+Use SEND_GLOBAL_SIGNAL instead.</p><h3 id="define/SEND_SIGNAL"><aside class="declaration">#define </aside>SEND_SIGNAL
+            <aside>(target, sigtype, arguments ...)</aside>
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L5">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 5"/></a>
+    </h3>
+    <p>Used to trigger signals and call procs registered for that signal
+The datum hosting the signal is automaticaly added as the first argument
+Returns a bitfield gathered from all registered procs
+Arguments given here are packaged in a list and given to _SendSignal</p><h3 id="define/_COMSIG_MECHCOMP_COMPATIBLE"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_COMPATIBLE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L134">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 134"/></a>
+    </h3>
+    <p>Returns 1</p><h3 id="define/_COMSIG_MECHCOMP_DISPATCH_ADD_FILTER"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_DISPATCH_ADD_FILTER
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L137">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 137"/></a>
+    </h3>
+    <p>Add a filtered connection, getting user input on the filter</p><h3 id="define/_COMSIG_MECHCOMP_DISPATCH_RM_OUTGOING"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_DISPATCH_RM_OUTGOING
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L139">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 139"/></a>
+    </h3>
+    <p>Remove a filtered connection</p><h3 id="define/_COMSIG_MECHCOMP_DISPATCH_VALIDATE"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_DISPATCH_VALIDATE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L141">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 141"/></a>
+    </h3>
+    <p>Test a signal to be sent to a connection</p><h3 id="define/_COMSIG_MECHCOMP_DROPCONNECT"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_DROPCONNECT
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L130">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 130"/></a>
+    </h3>
+    <p>Begin to connect two mechcomp devices together</p><h3 id="define/_COMSIG_MECHCOMP_GET_INCOMING"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_GET_INCOMING
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L128">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 128"/></a>
+    </h3>
+    <p>Return the component's incoming connections</p><h3 id="define/_COMSIG_MECHCOMP_GET_OUTGOING"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_GET_OUTGOING
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L126">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 126"/></a>
+    </h3>
+    <p>Return the component's outgoing connections</p><h3 id="define/_COMSIG_MECHCOMP_LINK"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_LINK
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L132">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 132"/></a>
+    </h3>
+    <p>Connect one MechComp compatible device as a receiver to a trigger. (This is meant to be a private method)</p><h3 id="define/_COMSIG_MECHCOMP_RECEIVE_MSG"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_RECEIVE_MSG
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L120">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 120"/></a>
+    </h3>
+    <p>Receiving a message from a mechcomp device for handling</p><h3 id="define/_COMSIG_MECHCOMP_RM_INCOMING"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_RM_INCOMING
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L122">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 122"/></a>
+    </h3>
+    <p>Remove [the caller] from the list of transmitting devices</p><h3 id="define/_COMSIG_MECHCOMP_RM_OUTGOING"><aside class="declaration">#define </aside>_COMSIG_MECHCOMP_RM_OUTGOING
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/component_defines.dm#L124">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;component_defines.dm 124"/></a>
+    </h3>
+    <p>Remove [the caller] from the list of receiving devices</p></main>
+<footer>
+    goonstation.dme
+    <a href="https://github.com/goonstation/goonstation/tree/e05ab2785b42cf849ff7d245881e6c4104398cc7">e05ab27</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.2</a></footer>
+</body>
+</html>

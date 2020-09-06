@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>_std&#x2F;_setup.dm - Goon Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Goon Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="_std/_setup.html#define">Define Details</a></header>
+<main>
+<h1>_std/_setup.dm 
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><td colspan="2"><p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p></td></tr>
+        <tr><th><a href="_std/_setup.html#define/MIN_TICKLAG">MIN_TICKLAG</a></th><td>min value ticklag can be</td></tr>
+        <tr><th><a href="_std/_setup.html#define/OVERLOADED_WORLD_TICKLAG">OVERLOADED_WORLD_TICKLAG</a></th><td>max value ticklag can be</td></tr>
+        <tr><th><a href="_std/_setup.html#define/TICKLAG_DILATION_INC">TICKLAG_DILATION_INC</a></th><td>how ticklag much to increase by when appropriate</td></tr>
+        <tr><th><a href="_std/_setup.html#define/TICKLAG_DILATION_DEC">TICKLAG_DILATION_DEC</a></th><td>how much to decrease by when appropriate //MBCX I DONT KNOW WHY BUT MOST VALUES CAUSE ROUNDING ERRORS, ITS VERY IMPORTANT THAT THIS REMAINS 0.2 FIOR NOW</td></tr>
+        <tr><th><a href="_std/_setup.html#define/OVERLOAD_PLAYERCOUNT">OVERLOAD_PLAYERCOUNT</a></th><td>when pcount is above this number on round start, increase ticklag to OVERLOADED_WORLD_TICKLAG to try to maintain smoothness</td></tr>
+        <tr><th><a href="_std/_setup.html#define/OSHAN_LIGHT_OVERLOAD">OSHAN_LIGHT_OVERLOAD</a></th><td>when pcount is above this number on game load, dont generate lighting surrounding the station because it lags the map to heck</td></tr>
+        <tr><th><a href="_std/_setup.html#define/SLOW_LIFE_PLAYERCOUNT">SLOW_LIFE_PLAYERCOUNT</a></th><td>whenn pcount is &gt;= this number, slow Life() processing a bit</td></tr>
+        <tr><th><a href="_std/_setup.html#define/SLOWEST_LIFE_PLAYERCOUNT">SLOWEST_LIFE_PLAYERCOUNT</a></th><td>whenn pcount is &gt;= this number, slow Life() processing a lot</td></tr>
+        <tr><th><a href="_std/_setup.html#define/MIN_DELETE_CHUNK_SIZE">MIN_DELETE_CHUNK_SIZE</a></th><td>Delete queue defines</td></tr>
+        <tr><th><a href="_std/_setup.html#define/FOOTBALL_MODE">FOOTBALL_MODE</a></th><td>time for johns madden</td></tr>
+        <tr><th><a href="_std/_setup.html#define/NON_EUCLIDEAN">NON_EUCLIDEAN</a></th><td>Activates the viscontents warps</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/FOOTBALL_MODE"><aside class="declaration">#define </aside>FOOTBALL_MODE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L1079">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 1079"/></a>
+    </h3>
+    <p>time for johns madden</p><h3 id="define/MIN_DELETE_CHUNK_SIZE"><aside class="declaration">#define </aside>MIN_DELETE_CHUNK_SIZE
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L870">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 870"/></a>
+    </h3>
+    <p>Delete queue defines</p><h3 id="define/MIN_TICKLAG"><aside class="declaration">#define </aside>MIN_TICKLAG
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L72">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 72"/></a>
+    </h3>
+    <p>min value ticklag can be</p><h3 id="define/NON_EUCLIDEAN"><aside class="declaration">#define </aside>NON_EUCLIDEAN
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L1107">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 1107"/></a>
+    </h3>
+    <p>Activates the viscontents warps</p><h3 id="define/OSHAN_LIGHT_OVERLOAD"><aside class="declaration">#define </aside>OSHAN_LIGHT_OVERLOAD
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L81">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 81"/></a>
+    </h3>
+    <p>when pcount is above this number on game load, dont generate lighting surrounding the station because it lags the map to heck</p><h3 id="define/OVERLOADED_WORLD_TICKLAG"><aside class="declaration">#define </aside>OVERLOADED_WORLD_TICKLAG
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L73">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 73"/></a>
+    </h3>
+    <p>max value ticklag can be</p><h3 id="define/OVERLOAD_PLAYERCOUNT"><aside class="declaration">#define </aside>OVERLOAD_PLAYERCOUNT
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L80">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 80"/></a>
+    </h3>
+    <p>when pcount is above this number on round start, increase ticklag to OVERLOADED_WORLD_TICKLAG to try to maintain smoothness</p><h3 id="define/SLOWEST_LIFE_PLAYERCOUNT"><aside class="declaration">#define </aside>SLOWEST_LIFE_PLAYERCOUNT
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L83">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 83"/></a>
+    </h3>
+    <p>whenn pcount is &gt;= this number, slow Life() processing a lot</p><h3 id="define/SLOW_LIFE_PLAYERCOUNT"><aside class="declaration">#define </aside>SLOW_LIFE_PLAYERCOUNT
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L82">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 82"/></a>
+    </h3>
+    <p>whenn pcount is &gt;= this number, slow Life() processing a bit</p><h3 id="define/TICKLAG_DILATION_DEC"><aside class="declaration">#define </aside>TICKLAG_DILATION_DEC
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L75">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 75"/></a>
+    </h3>
+    <p>how much to decrease by when appropriate //MBCX I DONT KNOW WHY BUT MOST VALUES CAUSE ROUNDING ERRORS, ITS VERY IMPORTANT THAT THIS REMAINS 0.2 FIOR NOW</p><h3 id="define/TICKLAG_DILATION_INC"><aside class="declaration">#define </aside>TICKLAG_DILATION_INC
+            <a href="https://github.com/goonstation/goonstation/blob/e05ab2785b42cf849ff7d245881e6c4104398cc7/_std/_setup.dm#L74">
+        <img src="git.png" width="16" height="16" title="_std&#x2F;_setup.dm 74"/></a>
+    </h3>
+    <p>how ticklag much to increase by when appropriate</p></main>
+<footer>
+    goonstation.dme
+    <a href="https://github.com/goonstation/goonstation/tree/e05ab2785b42cf849ff7d245881e6c4104398cc7">e05ab27</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.2</a></footer>
+</body>
+</html>

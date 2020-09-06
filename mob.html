@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob - Goon Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Goon Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob.html#var">Var Details</a> - <a href="mob.html#proc">Proc Details</a></header>
+<main>
+<h1>/<a href="mob.html">mob</a><aside> inherits /<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a></aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob.html#var/tgui_open_uis">tgui_open_uis</a></th><td>global</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob.html#proc/UpdateName">UpdateName</a></th><td>mob/proc/get_radiation()</td></tr>
+            <tr><th><a href="mob.html#proc/apply_custom_keybinds">apply_custom_keybinds</a></th><td></td></tr>
+            <tr><th><a href="mob.html#proc/attack_effects">attack_effects</a></th><td>After attack</td></tr>
+            <tr><th><a href="mob.html#proc/build_keybind_styles">build_keybind_styles</a></th><td></td></tr>
+            <tr><th><a href="mob.html#proc/check_attack_resistance">check_attack_resistance</a></th><td>Target damage modifiers</td></tr>
+            <tr><th><a href="mob.html#proc/damn">damn</a></th><td>////Set up the new body./
+Now play the degibbing animation and move them to the turf.</td></tr>
+            <tr><th><a href="mob.html#proc/disarm">disarm</a></th><td>Disarm intent</td></tr>
+            <tr><th><a href="mob.html#proc/do_help">do_help</a></th><td>Help intent</td></tr>
+            <tr><th><a href="mob.html#proc/ex_act">ex_act</a></th><td>MBC : I did this. this SUCKS. (pulling behavior is only applied in process_move... and step() doesn't trigger process_move nor is there anyway to override the step() behavior
+////////////////////////////////// end suck</td></tr>
+            <tr><th><a href="mob.html#proc/fake_damage">fake_damage</a></th><td>MISC BULLSHIT</td></tr>
+            <tr><th><a href="mob.html#proc/find_tool_in_hand">find_tool_in_hand</a></th><td>@param {int} tool_flag See _setup.dm for valid TOOL_X values
+@param {string} [hand] If set, checks only in specific hand, else checks all hands
+@returns {obj/item | 0} Tool that matched flag (and was in specific hand, if specified)</td></tr>
+            <tr><th><a href="mob.html#proc/get_base_damage_multiplier">get_base_damage_multiplier</a></th><td>Calculate damage</td></tr>
+            <tr><th><a href="mob.html#proc/get_vampire_blood">get_vampire_blood</a></th><td>Helper procs</td></tr>
+            <tr><th><a href="mob.html#proc/make_grinch">make_grinch</a></th><td>Setup</td></tr>
+            <tr><th><a href="mob.html#proc/make_hunter">make_hunter</a></th><td>Setup</td></tr>
+            <tr><th><a href="mob.html#proc/make_merchant">make_merchant</a></th><td>Setup</td></tr>
+            <tr><th><a href="mob.html#proc/make_vampire">make_vampire</a></th><td>Setup</td></tr>
+            <tr><th><a href="mob.html#proc/make_vampiric_zombie">make_vampiric_zombie</a></th><td>Setup</td></tr>
+            <tr><th><a href="mob.html#proc/make_werewolf">make_werewolf</a></th><td>Setup</td></tr>
+            <tr><th><a href="mob.html#proc/make_wrestler">make_wrestler</a></th><td>Setup</td></tr>
+            <tr><th><a href="mob.html#proc/melee_attack_test">melee_attack_test</a></th><td>Targeting checks</td></tr>
+            <tr><th><a href="mob.html#proc/reset_keymap">reset_keymap</a></th><td></td></tr>
+            <tr><th><a href="mob.html#proc/shared_ui_interaction">shared_ui_interaction</a></th><td>public</td></tr>
+            <tr><th><a href="mob.html#proc/werewolf_transform">werewolf_transform</a></th><td>Helper procs</td></tr>
+            <tr><th><a href="mob.html#proc/wizard_spellpower">wizard_spellpower</a></th><td>Helper procs</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/tgui_open_uis"><aside class="declaration">var </aside>tgui_open_uis
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/modules/tgui/external.dm#L124">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;external.dm 124"/></a></h3>
+        <p>global</p>
+<p>Tracks open UIs for a user.</p><h2 id="proc">Proc Details</h2><h3 id="proc/UpdateName">UpdateName<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob.dm#L2470">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob.dm 2470"/></a></aside>
+        </h3>
+        <p>mob/proc/get_radiation()</p><h3 id="proc/apply_custom_keybinds"><aside class="declaration">proc </aside>apply_custom_keybinds<aside>(/<a href="client.html">client</a>/C) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/modules/interface/mob_input.dm#L157">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;interface&#x2F;mob_input.dm 157"/></a></aside>
+        </h3>
+        <ul>
+<li>apply_custom_keybinds: Applies the client's custom keybind changelist, fetched from the cloud.</li>
+<li>Called by build_keybind_styles if not resetting the custom keybinds of a u</li>
+</ul><h3 id="proc/attack_effects"><aside class="declaration">proc </aside>attack_effects<aside>(target, /<a href="obj.html">obj</a>/item/affecting) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob/melee_attack_procs.dm#L1239">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob&#x2F;melee_attack_procs.dm 1239"/></a></aside>
+        </h3>
+        <p>After attack</p><h3 id="proc/build_keybind_styles"><aside class="declaration">proc </aside>build_keybind_styles<aside>(/<a href="client.html">client</a>/C) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/modules/interface/mob_input.dm#L141">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;interface&#x2F;mob_input.dm 141"/></a></aside>
+        </h3>
+        <ul>
+<li>build_keybind_styles: Additiviely applies keybind styles onto the client's keymap.</li>
+<li>To be extended upon in children types that want to have special keybind handling.</li>
+<li>Call this proc first, and then do your specific application of keybind styles.</li>
+</ul><h3 id="proc/check_attack_resistance"><aside class="declaration">proc </aside>check_attack_resistance<aside>(/<a href="obj.html">obj</a>/item/I) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob/melee_attack_procs.dm#L1184">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob&#x2F;melee_attack_procs.dm 1184"/></a></aside>
+        </h3>
+        <p>Target damage modifiers</p><h3 id="proc/damn"><aside class="declaration">proc </aside>damn<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob.dm#L2719">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob.dm 2719"/></a></aside>
+        </h3>
+        <p>////Set up the new body./
+Now play the degibbing animation and move them to the turf.</p><h3 id="proc/disarm"><aside class="declaration">proc </aside>disarm<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/target, extra_damage, suppress_flags, damtype, is_special) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob/melee_attack_procs.dm#L322">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob&#x2F;melee_attack_procs.dm 322"/></a></aside>
+        </h3>
+        <p>Disarm intent</p><h3 id="proc/do_help"><aside class="declaration">proc </aside>do_help<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/M) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob/melee_attack_procs.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob&#x2F;melee_attack_procs.dm 15"/></a></aside>
+        </h3>
+        <p>Help intent</p><h3 id="proc/ex_act">ex_act<aside>(severity, last_touched) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob.dm#L700">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob.dm 700"/></a></aside>
+        </h3>
+        <p>MBC : I did this. this SUCKS. (pulling behavior is only applied in process_move... and step() doesn't trigger process_move nor is there anyway to override the step() behavior
+////////////////////////////////// end suck</p><h3 id="proc/fake_damage"><aside class="declaration">proc </aside>fake_damage<aside>(amount, seconds) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/WorkInProgress/ISNStuff2.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;WorkInProgress&#x2F;ISNStuff2.dm 3"/></a></aside>
+        </h3>
+        <p>MISC BULLSHIT</p><h3 id="proc/find_tool_in_hand"><aside class="declaration">proc </aside>find_tool_in_hand<aside>(tool_flag, hand) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/procs/mob_procs.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;procs&#x2F;mob_procs.dm 60"/></a></aside>
+        </h3>
+        <p>@param {int} tool_flag See _setup.dm for valid TOOL_X values
+@param {string} [hand] If set, checks only in specific hand, else checks all hands
+@returns {obj/item | 0} Tool that matched flag (and was in specific hand, if specified)</p><h3 id="proc/get_base_damage_multiplier"><aside class="declaration">proc </aside>get_base_damage_multiplier<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob/melee_attack_procs.dm#L1130">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob&#x2F;melee_attack_procs.dm 1130"/></a></aside>
+        </h3>
+        <p>Calculate damage</p><h3 id="proc/get_vampire_blood"><aside class="declaration">proc </aside>get_vampire_blood<aside>(total_blood) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/vampire.dm#L59">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;vampire.dm 59"/></a></aside>
+        </h3>
+        <p>Helper procs</p><h3 id="proc/make_grinch"><aside class="declaration">proc </aside>make_grinch<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/modules/antagonists/grinch/abilities/grinch.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;antagonists&#x2F;grinch&#x2F;abilities&#x2F;grinch.dm 6"/></a></aside>
+        </h3>
+        <p>Setup</p><h3 id="proc/make_hunter"><aside class="declaration">proc </aside>make_hunter<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/hunter.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;hunter.dm 6"/></a></aside>
+        </h3>
+        <p>Setup</p><h3 id="proc/make_merchant"><aside class="declaration">proc </aside>make_merchant<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/diabolical.dm#L3">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;diabolical.dm 3"/></a></aside>
+        </h3>
+        <p>Setup</p><h3 id="proc/make_vampire"><aside class="declaration">proc </aside>make_vampire<aside>(shitty) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/vampire.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;vampire.dm 6"/></a></aside>
+        </h3>
+        <p>Setup</p><h3 id="proc/make_vampiric_zombie"><aside class="declaration">proc </aside>make_vampiric_zombie<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/vampiric_zombie.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;vampiric_zombie.dm 6"/></a></aside>
+        </h3>
+        <p>Setup</p><h3 id="proc/make_werewolf"><aside class="declaration">proc </aside>make_werewolf<aside>(force) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/werewolf.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;werewolf.dm 8"/></a></aside>
+        </h3>
+        <p>Setup</p><h3 id="proc/make_wrestler"><aside class="declaration">proc </aside>make_wrestler<aside>(make_inherent, belt_check, remove_powers, fake_wrestler) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/wrestler.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;wrestler.dm 6"/></a></aside>
+        </h3>
+        <p>Setup</p><h3 id="proc/melee_attack_test"><aside class="declaration">proc </aside>melee_attack_test<aside>(/<a href="mob.html">mob</a>/attacker, /<a href="obj.html">obj</a>/item/I, def_zone, disarm_check) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/mob/melee_attack_procs.dm#L1061">
+        <img src="git.png" width="16" height="16" title="code&#x2F;mob&#x2F;melee_attack_procs.dm 1061"/></a></aside>
+        </h3>
+        <p>Targeting checks</p><h3 id="proc/reset_keymap"><aside class="declaration">proc </aside>reset_keymap<aside>() 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/modules/interface/mob_input.dm#L172">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;interface&#x2F;mob_input.dm 172"/></a></aside>
+        </h3>
+        <ul>
+<li>reset_keymap: Builds the mob's keybind styles, checks for valid movement controllers, and finally sets the keymap.</li>
+<li>Called on: Login, Vehicle change, WASD/TG/AZERTY toggle, Keybind menu Reset</li>
+</ul><h3 id="proc/shared_ui_interaction"><aside class="declaration">proc </aside>shared_ui_interaction<aside>(src_object) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/modules/tgui/states.dm#L61">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;states.dm 61"/></a></aside>
+        </h3>
+        <p>public</p>
+<p>Standard interaction/sanity checks. Different mob types may have overrides.</p>
+<p>return UI_state The state of the UI.</p><h3 id="proc/werewolf_transform"><aside class="declaration">proc </aside>werewolf_transform<aside>(source_is_lycanthrophy, message_type) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/werewolf.dm#L57">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;werewolf.dm 57"/></a></aside>
+        </h3>
+        <p>Helper procs</p><h3 id="proc/wizard_spellpower"><aside class="declaration">proc </aside>wizard_spellpower<aside>(/<a href="datum.html">datum</a>/targetable/spell/spell) 
+        
+    
+            <a href="https://github.com/goonstation/goonstation/blob/e4223d0fa86c6f051336defac3dbcf69d48f996e/code/datums/abilities/wizard.dm#L66">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;abilities&#x2F;wizard.dm 66"/></a></aside>
+        </h3>
+        <p>Helper procs</p></main>
+<footer>
+    goonstation.dme
+    <a href="https://github.com/goonstation/goonstation/tree/e4223d0fa86c6f051336defac3dbcf69d48f996e">e4223d0</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.2</a></footer>
+</body>
+</html>
