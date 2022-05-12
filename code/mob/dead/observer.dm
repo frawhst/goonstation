@@ -30,6 +30,7 @@
 	if (hud)
 		hud.dispose()
 		hud = null
+	src.icon = null
 
 	..()
 
@@ -375,43 +376,51 @@
 
 	. = O
 
-	if (glasses)
-		var/image/glass = image(glasses.wear_image_icon, glasses.icon_state)
-		glass.color = glasses.color
-		glass.alpha = glasses.alpha * 0.75
-		O.overlays += glass
+	var/icon/ghosty = icon()
 
-	if (src.bioHolder) //Not necessary for ghost appearance, but this will be useful if the ghost decides to respawn as critter.
-		var/image/hair = image('icons/mob/human_hair.dmi', src.bioHolder.mobAppearance.customization_first.id)
-		hair.color = src.bioHolder.mobAppearance.customization_first_color
-		hair.alpha = 192
-		O.overlays += hair
+	for (var/dir in list(NORTH, SOUTH, EAST, WEST))
+		ghosty.Insert(src.build_flat_icon(dir), dir = dir) // guh
+	O.icon = ghosty
 
-		var/image/beard = image('icons/mob/human_hair.dmi', src.bioHolder.mobAppearance.customization_second.id)
-		beard.color = src.bioHolder.mobAppearance.customization_second_color
-		beard.alpha = 192
-		O.overlays += beard
+	O.add_filter("alpha mask", 0, alpha_mask_filter(y = 5, icon = 'icons/effects/ghost_mask.dmi'))
+	O.add_filter("outline", 1, outline_filter(size = 0.60, color = "#b2b2b2"))
+	O.color = list(0.33, 0.33, 0.33, 0, 0.33, 0.33, 0.33, 0, 0.33, 0.33, 0.33, 0, 0, 0, 0, 1)
+	animate_bumble(O)
 
-		var/image/detail = image('icons/mob/human_hair.dmi', src.bioHolder.mobAppearance.customization_third.id)
-		detail.color = src.bioHolder.mobAppearance.customization_third_color
-		detail.alpha = 192
-		O.overlays += detail
+	// if (glasses)
+	// 	var/image/glass = image(glasses.wear_image_icon, glasses.icon_state)
+	// 	glass.color = glasses.color
+	// 	glass.alpha = glasses.alpha * 0.75
+	// 	O.overlays += glass
 
-		O.wig = new
-		O.wig.mat_changename = 0
-		var/datum/material/wigmat = getMaterial("ectofibre")
-		wigmat.color = src.bioHolder.mobAppearance.customization_first_color
-		O.wig.setMaterial(wigmat)
-		O.wig.name = "[O.name]'s hair"
-		O.wig.icon = 'icons/mob/human_hair.dmi'
-		O.wig.icon_state = src.bioHolder.mobAppearance.customization_first.id
-		O.wig.color = src.bioHolder.mobAppearance.customization_first_color
-		O.wig.wear_image_icon = 'icons/mob/human_hair.dmi'
-		O.wig.wear_image = image(O.wig.wear_image_icon, O.wig.icon_state)
-		O.wig.wear_image.color = src.bioHolder.mobAppearance.customization_first_color
+	// if (src.bioHolder) //Not necessary for ghost appearance, but this will be useful if the ghost decides to respawn as critter.
+	// 	var/image/hair = image('icons/mob/human_hair.dmi', src.bioHolder.mobAppearance.customization_first.id)
+	// 	hair.color = src.bioHolder.mobAppearance.customization_first_color
+	// 	hair.alpha = 192
+	// 	O.overlays += hair
 
+	// 	var/image/beard = image('icons/mob/human_hair.dmi', src.bioHolder.mobAppearance.customization_second.id)
+	// 	beard.color = src.bioHolder.mobAppearance.customization_second_color
+	// 	beard.alpha = 192
+	// 	O.overlays += beard
 
-	return O
+	// 	var/image/detail = image('icons/mob/human_hair.dmi', src.bioHolder.mobAppearance.customization_third.id)
+	// 	detail.color = src.bioHolder.mobAppearance.customization_third_color
+	// 	detail.alpha = 192
+	// 	O.overlays += detail
+
+	// 	O.wig = new
+	// 	O.wig.mat_changename = 0
+	// 	var/datum/material/wigmat = getMaterial("ectofibre")
+	// 	wigmat.color = src.bioHolder.mobAppearance.customization_first_color
+	// 	O.wig.setMaterial(wigmat)
+	// 	O.wig.name = "[O.name]'s hair"
+	// 	O.wig.icon = 'icons/mob/human_hair.dmi'
+	// 	O.wig.icon_state = src.bioHolder.mobAppearance.customization_first.id
+	// 	O.wig.color = src.bioHolder.mobAppearance.customization_first_color
+	// 	O.wig.wear_image_icon = 'icons/mob/human_hair.dmi'
+	// 	O.wig.wear_image = image(O.wig.wear_image_icon, O.wig.icon_state)
+	// 	O.wig.wear_image.color = src.bioHolder.mobAppearance.customization_first_color
 
 /mob/living/silicon/robot/ghostize()
 	var/mob/dead/observer/O = ..()
