@@ -31,7 +31,7 @@
 	var/uses_handwriting = 0
 	stamina_damage = 0
 	stamina_cost = 0
-	rand_pos = 1
+	rand_pos = TRUE
 	var/in_use = 0
 	var/color_name = "black"
 	var/clicknoise = 1
@@ -40,6 +40,7 @@
 	var/spam_timer = 20
 	var/symbol_setting = null
 	var/material_uses = 10
+	var/can_dip = TRUE // can we dip this in reagents to write with them?
 	var/static/list/c_default = list("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
 	"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Exclamation Point", "Question Mark", "Period", "Comma", "Colon", "Semicolon", "Ampersand", "Left Parenthesis", "Right Parenthesis",
 	"Left Bracket", "Right Bracket", "Percent", "Plus", "Minus", "Times", "Divided", "Equals", "Less Than", "Greater Than")
@@ -87,6 +88,11 @@
 				if (src)
 					src.spam_flag_sound = 0
 
+	get_desc()
+		. = ..()
+		if (src.reagents.total_volume && src.can_dip)
+			. += "<br><span class = 'notice'>It's been dipped in a [get_nearest_color(src.reagents.get_average_color())] substance."
+
 	proc/apply_material_to_drawing(obj/decal/cleanable/writing/drawing, mob/user)
 		if(src.material)
 			drawing.setMaterial(src.material)
@@ -128,8 +134,8 @@
 			G.pixel_x = rand(-4,4)
 			G.pixel_y = rand(-4,4)
 		if (src.reagents.total_volume)
+			G.color = src.reagents.get_average_rgb()
 			src.reagents.trans_to(G, PEN_REAGENT_CAPACITY)
-			G.add_filter("reagent_coloration", 1, color_matrix_filter(normalize_color_to_matrix(G.reagents.get_average_rgb())))
 
 		src.remove_filter("reagent_coloration")
 		src.color_name = initial(src.color_name)
@@ -145,7 +151,7 @@
 			src.material_uses = initial(src.material_uses)
 
 	afterattack(atom/target, mob/user)
-		if (target.is_open_container() && target.reagents)
+		if (target.is_open_container() && target.reagents && src.can_dip)
 			if (target.reagents.total_volume)
 				boutput(user, "<span class='hint'>You dip [src] in [target].</span>")
 				target.reagents.trans_to(src, min(PEN_REAGENT_CAPACITY , src.reagents.maximum_volume - src.reagents.total_volume))
@@ -154,19 +160,13 @@
 				src.font_color = src.color
 				src.color_name = get_nearest_color(src.reagents.get_average_color()) // why the fuck are there 3 vars for this
 
-				src.removeMaterial() // no
+				if (src.material)
+					src.removeMaterial() // no
+					src.visible_message("<span class='alert'>Dipping [src] causes the material to slough off.</span>")
 			else
 				boutput(user, "<span class='alert'>[target] is empty!</span>")
 		else
 			return ..()
-
-	get_desc(dist, mob/user)
-		. = ..()
-		if (dist > 2)
-			return
-		if (!src.reagents)
-			return
-		. += "<br><span class='notice'>[reagents.get_description(user, (RC_SPECTRO | RC_FULLNESS))]</span>"
 
 	setMaterial(datum/material/mat1, appearance, setname, copy, use_descriptors)
 		. = ..()
@@ -175,14 +175,14 @@
 	custom_suicide = TRUE
 	suicide(var/mob/user as mob)
 		if (!src.user_can_suicide(user))
-			return 0
+			return FALSE
 		user.visible_message("<span class='alert'><b>[user] gently pushes the end of [src] into [his_or_her(user)] nose, then leans forward until [he_or_she(user)] falls to the floor face first!</b></span>")
 		user.TakeDamage("head", 175, 0)
 		SPAWN(50 SECONDS)
 			if (user && !isdead(user))
-				user.suiciding = 0
+				user.suiciding = FALSE
 		qdel(src)
-		return 1
+		return TRUE
 /obj/item/pen/fancy
 	name = "fancy pen"
 	desc = "One of those really fancy National Notary pens. Looks like the 'Grand Duchess' model with the gold nib and marblewood barrel."
@@ -685,8 +685,8 @@
 			G.pixel_x = rand(-4,4)
 			G.pixel_y = rand(-4,4)
 		if (src.reagents.total_volume)
+			G.color = src.reagents.get_average_rgb()
 			src.reagents.trans_to(G, PEN_REAGENT_CAPACITY)
-			G.add_filter("reagent_coloration", 1, color_matrix_filter(normalize_color_to_matrix(G.reagents.get_average_rgb())))
 
 		src.remove_filter("reagent_coloration")
 		src.color_name = initial(src.color_name)

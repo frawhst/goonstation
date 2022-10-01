@@ -742,6 +742,7 @@ var/list/blood_decal_violent_icon_states = list("floor1", "floor2", "floor3", "f
 	icon = 'icons/obj/items/balloon.dmi'
 	icon_state = "balloon_white_pop"
 
+// reagent coloration is done in pens_writing_etc
 /obj/decal/cleanable/writing
 	name = "writing"
 	desc = "Someone's scribbled something here."
@@ -764,6 +765,8 @@ var/list/blood_decal_violent_icon_states = list("floor1", "floor2", "floor3", "f
 
 	get_desc(dist)
 		. = "<br><span class='notice'>It says[src.material ? src.material : src.color_name ? " in [src.color_name]" : null]:</span><br>[words]"
+		if (src.reagents.total_volume)
+			. += "<br><span class = 'notice'>It's written in a [get_nearest_color(src.reagents.get_average_color())] substance."
 
 	UpdateName()
 		src.name = "[name_prefix(null, 1)][src.real_name][name_suffix(null, 1)]"
