@@ -799,6 +799,20 @@
 			if (src.law_circuits[i])
 				src.power_usage += 100
 
+	/// Pushes laws to a silicon, updating their internal lawset
+	proc/push_laws(mob/living/silicon/robot)
+		if (!robot.use_law_rack)
+			CRASH("Mob [identify_object(robot)] which doesn't use a law rack is having laws pushed to it somehow.")
+		robot.current_laws = src.law_circuits.Copy()
+
+	/// Registers a new silicon to this rack, updating their laws accordingly
+	proc/register_new_silicon(mob/living/silicon/robot)
+		if (!robot.use_law_rack)
+			CRASH("Mob [identify_object(robot)] which doesn't use a law rack is being registered to a law rack somehow.")
+		robot.law_rack_connection = src
+		src.push_laws(robot)
+
+
 /particles/rack_smoke
 	icon = 'icons/effects/effects.dmi'
 	icon_state = list("smoke")

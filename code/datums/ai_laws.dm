@@ -22,9 +22,9 @@
 			src.register_new_rack(R)
 		for (var/mob/living/silicon/S in mobs)
 			if(!S.syndicate)
-				S.law_rack_connection = src.default_ai_rack
+				src.default_ai_rack.register_new_silicon(S)
 			else
-				S.law_rack_connection = src.default_ai_rack_syndie
+				src.default_ai_rack_syndie.register_new_silicon(S)
 
 
 	proc/register_new_rack(var/obj/machinery/lawrack/new_rack)

@@ -5,8 +5,8 @@
 	icon_state = "drone-dead"
 
 	max_health = 25 //weak as fuk
-	density = 0 //no bumping into people, basically
-	robot_talk_understand = 0 //we arent proper robots
+	density = FALSE //no bumping into people, basically
+	robot_talk_understand = FALSE //we arent proper robots
 
 	sound_fart = 'sound/voice/farts/poo2_robot.ogg'
 	flags = NODRIFT | TABLEPASS | DOORPASS
@@ -23,16 +23,18 @@
 	//state tracking
 	var/faceColor
 	var/faceType
-	var/charging = 0
-	var/newDrone = 0
+	var/charging = FALSE
+	var/newDrone = FALSE
 
-	var/jetpack = 1 //fuck whoever made this
+	var/jetpack = TRUE //fuck whoever made this
 
 	var/sees_static = TRUE
 
 	//gimmicky things
 	var/obj/item/clothing/head/hat = null
 	var/obj/item/clothing/suit/bedsheet/bedsheet = null
+
+	use_law_rack = FALSE
 
 	New()
 		..()

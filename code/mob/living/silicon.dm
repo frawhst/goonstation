@@ -20,7 +20,12 @@ ADMIN_INTERACT_PROCS(/mob/living/silicon, proc/pick_law_rack)
 	var/dependent = 0 // if we're host to a mainframe's mind
 	var/shell = 0 // are we available for use as a shell for an AI
 
-	var/obj/machinery/lawrack/law_rack_connection = null // which rack we're getting our laws from
+	/// Do we connect to law racks at all? Skipped on law updates if not
+	var/use_law_rack = TRUE
+	/// Law rack we're getting our laws from (if any, and if not emagged)
+	var/obj/machinery/lawrack/law_rack_connection = null
+	/// List of current laws. Will be synced to law rack unless Fuckery has occurred
+	var/list/current_laws
 
 	var/obj/item/cell/cell = null
 
@@ -34,9 +39,6 @@ ADMIN_INTERACT_PROCS(/mob/living/silicon, proc/pick_law_rack)
 	grabresistmessage = "but can't get a good grip!"
 
 	dna_to_absorb = 0 //robots dont have DNA for fuck sake
-
-
-	//voice_type = "robo"
 
 /mob/living/silicon/New()
 	..()
@@ -58,10 +60,6 @@ ADMIN_INTERACT_PROCS(/mob/living/silicon, proc/pick_law_rack)
 
 /mob/living/silicon/can_drink()
 	return FALSE
-
-///mob/living/silicon/proc/update_canmove()
-//	..()
-	//canmove = !(src.hasStatus(list("weakened", "paralysis", "stunned")) || buckled)
 
 /mob/living/silicon/proc/use_power()
 	return
@@ -548,7 +546,7 @@ var/global/list/module_editors = list()
 	. += pick("Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi", "Omicron", "Pi", "Rho", "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega")
 	. += "-[rand(1, 99)]"
 
-///converts a cyborg/AI to a syndicate version, taking the causing agent as an argument
+/// Converts a cyborg/AI to a syndicate version, taking the causing agent as an argument
 /mob/living/silicon/proc/make_syndicate(var/cause)
 	if (!src.mind) //you need a mind to be evil
 		return FALSE
@@ -567,7 +565,7 @@ var/global/list/module_editors = list()
 	return FALSE
 
 /mob/living/silicon/is_cold_resistant()
-	.= 1
+	. = TRUE
 
 /mob/living/silicon/shock(var/atom/origin, var/wattage, var/zone, var/stun_multiplier = 1, var/ignore_gloves = 0)
 	return 0
@@ -619,7 +617,7 @@ var/global/list/module_editors = list()
 		var/area/A = get_area(src.law_rack_connection)
 		boutput(user, "You connect [src.name] to the stored law rack at [A.name].")
 	src.playsound_local(src, 'sound/misc/lawnotify.ogg', 100, flags = SOUND_IGNORE_SPACE)
-	src.show_text("<h3>You have been connected to a law rack</h3>", "red")
+	src.show_text("<h3>You have been connected to a law rack!</h3>", "red")
 	src.show_laws()
 
 /mob/living/silicon/proc/pick_law_rack()
