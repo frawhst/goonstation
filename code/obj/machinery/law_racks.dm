@@ -26,6 +26,8 @@
 	var/list/holo_expansions = list()
 	/// list of ability expansions
 	var/list/datum/targetable/ai_abilities = list()
+	/// list of silicons currently registered to this rack
+	var/list/mob/living/silicon/registered_silicons = list()
 
 	New(loc)
 		START_TRACKING
