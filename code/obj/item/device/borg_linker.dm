@@ -16,15 +16,14 @@ TYPEINFO(/obj/item/device/borg_linker)
 	g_amt = 20
 	var/obj/machinery/lawrack/linked_rack = null
 
-	attack_self(var/mob/user)
+	attack_self(mob/user)
 		if(src.linked_rack)
 			var/area/A = get_area(src.linked_rack.loc)
-			boutput(user,"Stored law rack at: "+A.name)
+			boutput(user, SPAN_HINT("Stored law rack at: " + A.name))
 		else
-			boutput(user, "No law rack connected.")
+			boutput(user, SPAN_ALERT("No law rack connected."))
 
 		if(src.linked_rack)
 			var/raw = tgui_alert(user,"Do you want to clear the linked rack?", "Linker", list("Yes", "No"))
 			if (raw == "Yes")
 				src.linked_rack = null
-		return
