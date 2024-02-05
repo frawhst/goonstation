@@ -90,6 +90,7 @@
 		src.registered_racks |= new_rack //shouldn't be possible, but just in case - there can only be one instance of rack in registered
 		new_rack.update_last_laws()
 
+	// Make sure you call this AFTER removing all the law modules, or the silicons won't get their proper (blank) laws
 	proc/unregister_rack(var/obj/machinery/lawrack/dead_rack)
 		logTheThing(LOG_STATION, src, "[src] unregisters the law rack [constructName(dead_rack)]")
 
@@ -104,11 +105,8 @@
 		//remove from list
 		src.registered_racks -= dead_rack
 
-		//clear abilities
-		dead_rack.ai_abilities = list()
-
-		// clear laws for connected borgs
-		dead_rack.push_laws_to_all()
+		// notify/update connected silicons with (presumably now-empty) laws
+		dead_rack.on_disable()
 
 		//find all connected borgs and remove their connection too
 		for (var/mob/living/silicon/R in mobs)

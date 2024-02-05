@@ -52,8 +52,8 @@
 
 	disposing()
 		STOP_TRACKING
-		ticker?.ai_law_rack_manager.unregister_rack(src)
 		src.drop_all_modules()
+		ticker?.ai_law_rack_manager.unregister_rack(src)
 		UpdateIcon()
 		. = ..()
 
@@ -65,8 +65,8 @@
 
 	was_deconstructed_to_frame(mob/user)
 		logTheThing(LOG_STATION, user, "<b>deconstructed</b> rack [constructName(src)]")
-		ticker?.ai_law_rack_manager.unregister_rack(src)
 		src.drop_all_modules()
+		ticker?.ai_law_rack_manager.unregister_rack(src)
 		UpdateIcon()
 		. = ..()
 
@@ -800,10 +800,9 @@
 		for (var/mob/living/silicon/robot as anything in src.registered_silicons)
 			src.push_laws(robot)
 
-	/// Disconnects all connected silicons from this law rack; used when the law rack is destroyed or otherwise rendered nonfunctional
-	///
-	/// Functionally the same as push_laws_to_all with no laws, with some extra messaging/logging
-	proc/disconnect_all()
+	/// 'Disconnects' all connected silicons from this law rack; used when the law rack is destroyed or otherwise rendered nonfunctional
+	proc/on_disable()
+		src.ai_abilities = list()
 		for (var/mob/living/silicon/robot as anything in src.registered_silicons)
 			if (isAI(robot))
 				var/mob/living/silicon/ai/AI = robot
@@ -812,8 +811,10 @@
 
 			// due to the above hack, if you put any silicon-specific procs/vars below this line, it WILL runtime
 			robot.playsound_local(robot, 'sound/misc/lawnotify.ogg', 100, flags = SOUND_IGNORE_SPACE)
-			robot.show_text("<h3>ERROR: Lost connection to law rack. No laws detected!</h3>", "red")
-			logTheThing(LOG_STATION,  robot, "[robot.name] loses connection to the rack [constructName(src)] and now has no laws")
+			robot.show_text("<h3>ERROR: Law rack has been disabled. No laws detected!</h3>", "red")
+			logTheThing(LOG_STATION,  robot, "[constructName(src)] is disabled, and [robot.name] and now has no laws.")
+
+		src.push_laws_to_all()
 
 	/// Registers a new silicon to this rack, updating their laws accordingly
 	proc/register_new_silicon(mob/living/silicon/robot)
