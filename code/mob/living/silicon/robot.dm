@@ -1140,10 +1140,7 @@
 					logTheThing(LOG_STATION, src, "[constructName(user)] tried to connect [src] to the rack [constructName(src.law_rack_connection)] but they are [src.emagged ? "emagged" : "syndicate"], so it failed.")
 					elecflash(src,power=2)
 					return
-				if(src.law_rack_connection)
-					var/raw = tgui_alert(user,"Do you want to overwrite the linked rack?", "Linker", list("Yes", "No"))
-					if (raw == "Yes")
-						src.set_law_rack(linker.linked_rack, user)
+				linker.linked_rack.register_new_silicon(src, user)
 			else
 				boutput(user,"Linker lost connection to the stored law rack!")
 			return

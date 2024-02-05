@@ -817,10 +817,11 @@
 		src.push_laws_to_all()
 
 	/// Registers a new silicon to this rack, updating their laws accordingly
-	proc/register_new_silicon(mob/living/silicon/robot)
+	proc/register_new_silicon(mob/living/silicon/robot, mob/user)
 		if (!robot.use_law_rack)
 			CRASH("Mob [identify_object(robot)] which doesn't use a law rack is being registered to a law rack somehow.")
-		robot.law_rack_connection = src
+		robot.law_rack_connection = src // TODO remove
+		src.registered_silicons += robot
 		src.push_laws(robot)
 
 		// todo- this section is maybe copy paste that should all be in push_laws???
@@ -830,6 +831,14 @@
 
 			for(var/ability_type in src.ai_abilities)
 				AI.abilityHolder.addAbility(ability_type)
+
+		logTheThing(LOG_STATION, robot, "[robot.name] is connected to the rack at [constructName(src)][user ? " by [constructName(user)]" : ""]")
+		if (user)
+			var/area/A = get_area(src)
+			boutput(user, "You connect [robot.name] to the stored law rack at [A.name].")
+		robot.playsound_local(robot, 'sound/misc/lawnotify.ogg', 100, flags = SOUND_IGNORE_SPACE)
+		boutput(robot, SPAN_ALERT("<h3>You have been connected to a law rack!</h3>"))
+		robot.show_laws()
 
 	proc/reset_ai_abilities(mob/living/silicon/ai/target)
 		var/ability_type

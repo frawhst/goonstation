@@ -436,10 +436,7 @@ or don't if it uses a custom topopen overlay
 			return
 
 		if(linker.linked_rack in ticker.ai_law_rack_manager.registered_racks)
-			if(src.law_rack_connection)
-				var/raw = tgui_alert(user,"Do you want to overwrite the linked rack?", "Linker", list("Yes", "No"))
-				if (raw == "Yes")
-					src.set_law_rack(linker.linked_rack, user)
+			linker.linked_rack.register_new_silicon(src, user)
 		else
 			boutput(user,"Linker lost connection to the stored law rack!")
 		return
