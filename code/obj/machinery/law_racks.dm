@@ -823,6 +823,14 @@
 		robot.law_rack_connection = src
 		src.push_laws(robot)
 
+		// todo- this section is maybe copy paste that should all be in push_laws???
+		if (isAI(robot))
+			var/mob/living/silicon/ai/AI = robot
+			AI.holoHolder.text_expansion = src.holo_expansions.Copy()
+
+			for(var/ability_type in src.ai_abilities)
+				AI.abilityHolder.addAbility(ability_type)
+
 	proc/reset_ai_abilities(mob/living/silicon/ai/target)
 		var/ability_type
 		var/datum/abilityHolder/silicon/ai/aiAH = target.abilityHolder

@@ -331,12 +331,6 @@ or don't if it uses a custom topopen overlay
 	if(eyecam)
 		eyecam.abilityHolder = abilityHolder
 
-	if(law_rack_connection)
-		holoHolder.text_expansion = law_rack_connection.holo_expansions.Copy()
-
-		for(var/ability_type in law_rack_connection.ai_abilities)
-			abilityHolder.addAbility(ability_type)
-
 	src.hologramContextActions = list()
 	for(var/actionType in childrentypesof(/datum/contextAction/ai_hologram))
 		var/datum/contextAction/ai_hologram/action = new actionType(src)
