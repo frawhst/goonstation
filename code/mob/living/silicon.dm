@@ -44,11 +44,11 @@ ADMIN_INTERACT_PROCS(/mob/living/silicon, proc/pick_law_rack)
 	..()
 	src.botcard = new /obj/item/card/id(src)
 	if(src.syndicate)
-		src.law_rack_connection = ticker?.ai_law_rack_manager.default_ai_rack_syndie
-		logTheThing(LOG_STATION, src, "New cyborg [src] connects to default SYNDICATE rack [constructName(src.law_rack_connection)]")
+		ticker?.ai_law_rack_manager.default_ai_rack_syndie?.register_new_silicon(src)
+		logTheThing(LOG_STATION, src, "New cyborg [src] connects to default SYNDICATE rack [constructName(ticker?.ai_law_rack_manager.default_ai_rack_syndie)]")
 	else
-		src.law_rack_connection = ticker?.ai_law_rack_manager.default_ai_rack
-		logTheThing(LOG_STATION, src, "New cyborg [src] connects to default rack [constructName(src.law_rack_connection)]")
+		ticker?.ai_law_rack_manager.default_ai_rack?.register_new_silicon(src)
+		logTheThing(LOG_STATION, src, "New cyborg [src] connects to default rack [constructName(ticker?.ai_law_rack_manager.default_ai_rack)]")
 	APPLY_ATOM_PROPERTY(src, PROP_MOB_CAN_CONSTRUCT_WITHOUT_HOLDING, src)
 
 /mob/living/silicon/disposing()
@@ -559,7 +559,9 @@ var/global/list/module_editors = list()
 	if (src.syndicate || src.syndicate_possible)
 		if (src.mind.add_antagonist(ROLE_SYNDICATE_ROBOT, respect_mutual_exclusives = FALSE, source = ANTAGONIST_SOURCE_CONVERTED))
 			logTheThing(LOG_STATION, src, "[src] was made a Syndicate robot at [log_loc(src)]. [cause ? " Source: [constructTarget(cause,"combat")]" : ""]")
-			logTheThing(LOG_STATION, src, "[src.name] is connected to the default Syndicate rack [constructName(src.law_rack_connection)] [cause ? " Source: [constructTarget(cause,"combat")]" : ""]")
+			logTheThing(LOG_STATION, src,
+							"[src.name] is connected to the default Syndicate rack [constructName(ticker?.ai_law_rack_manager.default_ai_rack_syndie)]"
+							+ " [cause ? " Source: [constructTarget(cause,"combat")]" : ""]")
 			return TRUE
 
 	return FALSE

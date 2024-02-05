@@ -96,14 +96,9 @@
 
 /datum/game_mode/assday/send_intercept()
 	..(src.traitors)
+
 /datum/game_mode/assday/declare_completion()
 	return // don't call parent because we don't want to spam objectives of 80 traitors, thanks
-
-/datum/game_mode/assday/proc/add_law_zero(mob/living/silicon/ai/killer)
-	var/law = "Accomplish your objectives at all costs."
-	boutput(killer, "<b>Your laws have been changed!</b>")
-	killer.law_rack_connection?.SetLawCustom("Assday Law Module", law, 1, TRUE, TRUE)
-	killer.law_rack_connection?.UpdateLaws()
 
 /datum/game_mode/assday/proc/get_mob_list()
 	var/list/mobs = list()

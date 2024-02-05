@@ -739,10 +739,10 @@
 
 	/// Deletes a law in an abritrary slot. Does not call UpdateLaws()
 	proc/DeleteLaw(var/slot=1)
-		if(istype(src.law_circuits[slot],/obj/item/aiModule/hologram_expansion))
+		if(istype(src.law_circuits[slot], /obj/item/aiModule/hologram_expansion))
 			var/obj/item/aiModule/hologram_expansion/holo = src.law_circuits[slot]
 			src.holo_expansions -= holo.expansion
-		else if(istype(src.law_circuits[slot],/obj/item/aiModule/ability_expansion))
+		else if(istype(src.law_circuits[slot], /obj/item/aiModule/ability_expansion))
 			var/obj/item/aiModule/ability_expansion/expansion = src.law_circuits[slot]
 			src.ai_abilities -= expansion.ai_abilities
 		src.law_circuits[slot]=null
@@ -794,6 +794,26 @@
 		if (!robot.use_law_rack)
 			CRASH("Mob [identify_object(robot)] which doesn't use a law rack is having laws pushed to it somehow.")
 		robot.current_laws = src.law_circuits.Copy()
+
+	/// Pushes laws to all connected silicons
+	proc/push_laws_to_all()
+		for (var/mob/living/silicon/robot as anything in src.registered_silicons)
+			src.push_laws(robot)
+
+	/// Disconnects all connected silicons from this law rack; used when the law rack is destroyed or otherwise rendered nonfunctional
+	///
+	/// Functionally the same as push_laws_to_all with no laws, with some extra messaging/logging
+	proc/disconnect_all()
+		for (var/mob/living/silicon/robot as anything in src.registered_silicons)
+			if (isAI(robot))
+				var/mob/living/silicon/ai/AI = robot
+				if (AI.deployed_to_eyecam)
+					robot = AI.eyecam // hack- eyecam is the wrong type but it avoids code duplication
+
+			// due to the above hack, if you put any silicon-specific procs/vars below this line, it WILL runtime
+			robot.playsound_local(robot, 'sound/misc/lawnotify.ogg', 100, flags = SOUND_IGNORE_SPACE)
+			robot.show_text("<h3>ERROR: Lost connection to law rack. No laws detected!</h3>", "red")
+			logTheThing(LOG_STATION,  robot, "[robot.name] loses connection to the rack [constructName(src)] and now has no laws")
 
 	/// Registers a new silicon to this rack, updating their laws accordingly
 	proc/register_new_silicon(mob/living/silicon/robot)

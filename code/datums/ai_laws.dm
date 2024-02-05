@@ -107,6 +107,9 @@
 		//clear abilities
 		dead_rack.ai_abilities = list()
 
+		// clear laws for connected borgs
+		dead_rack.push_laws_to_all()
+
 		//find all connected borgs and remove their connection too
 		for (var/mob/living/silicon/R in mobs)
 			if (isghostdrone(R))
@@ -122,7 +125,6 @@
 			if(E.mainframe?.law_rack_connection == dead_rack)
 				E.mainframe.law_rack_connection = null
 				E.playsound_local(E, 'sound/misc/lawnotify.ogg', 100, flags = SOUND_IGNORE_SPACE)
-				logTheThing(LOG_STATION, E.mainframe, "[E.mainframe.name] loses connection to the rack [constructName(dead_rack)] and now has no laws")
 
 /* Law Rack Corruption */
 	proc/corrupt_all_racks(picked_law = "Beep repeatedly.", replace = TRUE, law_number = null)
